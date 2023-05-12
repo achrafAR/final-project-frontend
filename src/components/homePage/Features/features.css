@@ -1,0 +1,40 @@
+.features_main {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 80rem;
+    margin: 0 auto;
+    height: 15rem;
+
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.feature h2 {
+    font-size: 40px;
+    /* font-family: 'Playfair Display', Sans-Serif; */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.feature h5 {
+    font-size: 20px;
+    /* font-family: 'Playfair Display', Sans-Serif; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    font-size: 16px;
+    /* font-family: 'Playfair Display', Sans-Serif; */
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

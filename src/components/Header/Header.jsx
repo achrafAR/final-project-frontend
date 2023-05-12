@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import './header.css'
 import accountIcon from '../../icons/login.png'
-function header() {
+function Header() {
 
     const navbar = [
         { name: 'HOME', link: '/' },
@@ -10,7 +10,7 @@ function header() {
         { name: 'CONTACT US', link: '/' }
 
     ]
-
+    
 
 
 
@@ -34,11 +34,11 @@ function header() {
                     <img className='icon_login' src={accountIcon} alt ='login'/>
                 </div>
                 <div className='explore_btn'>
-                    <a href= "#" className='explore_btn_header'>Expore Now</a>
+                    <a href= "www.google.com" className='explore_btn_header'>Expore Now</a>
                 </div>
             </div>
         </div>
     )
 }
 
-export default header
+export default Header
