@@ -1,0 +1,90 @@
+.video_description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 65vh;
+
+}
+
+.video_description_container{
+    background: url(../../../icons/template.svg);
+    margin-top: 120px;
+
+}
+
+.video_description_video img{
+    width: 400px;
+    height: 400px;
+}
+
+.blogger_image img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.video_description_information{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.blogger{
+    display: flex;
+
+}
+
+.video_description{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.video_description_information_title h2{
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: 'Playfair Display', Sans-Serif;
+    font-weight: 900;
+
+}
+
+.video_description_information_description p{
+    font-size: 16px;
+    color:gray;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.blogger_details_name h5{
+    font-size: 20px;
+    font-family: 'Playfair Display', Sans-Serif;
+
+}
+
+
+
+.blogger_details_job p{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: gray;
+}
+
+
+
+.blogger_details_name h5{
+    margin: 0;
+}
+
+.blogger_details_job p{
+    margin: 0;
+}
+
+.blogger{
+    margin-top: 10px;
+}
+
+.blogger_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}

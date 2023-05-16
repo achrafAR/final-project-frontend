@@ -8,8 +8,10 @@
 .activity_description_container{
     width: 70%;
     margin: 0px auto;
-
 }
+
+
+
 .template_backgroung_activity_description{
     background: url(../../../icons/template.svg);
     height: 80vh;
@@ -40,6 +42,7 @@
 .activity_description_description p{
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
     box-shadow: 2px 4px 8px #25AD99 ;
+    padding: 10px;
 
 
 }

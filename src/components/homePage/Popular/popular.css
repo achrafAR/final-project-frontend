@@ -1,7 +1,7 @@
 .popular {
     width: 70%;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
 .destination_title h2{
@@ -10,6 +10,8 @@
     margin-top: 10px;
 
 }
+
+
 .destination_title p{
     font-weight: bold;
     color: gray;

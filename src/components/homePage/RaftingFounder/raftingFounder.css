@@ -1,0 +1,39 @@
+.rafting_founder_image img{
+    width: 60px;
+    height: 60px;
+}
+
+.rafting_founder{
+    display: flex;
+    flex-direction: row;
+}
+
+.rafting_founder_container{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 120px;
+
+}
+
+.rafting_founder_title_description{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.rafting_founder_title_description p{
+    color: gray;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.rafting_founder_title_description h5{
+    margin: 0;
+    font-size: 25px;
+    font-family: 'Playfair Display', Sans-Serif;
+
+}
