@@ -1,0 +1,72 @@
+.activity_description{
+    display: flex;
+    padding:20px;
+    align-items: center;
+
+}
+
+.activity_description_container{
+    width: 70%;
+    margin: 0px auto;
+
+}
+.template_backgroung_activity_description{
+    background: url(../../../icons/template.svg);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    
+}
+.activity_description_image img{
+    height: 120px;
+    width: 600px;
+}
+
+.static_title h5{
+    font-size: 40px;
+    font-family: 'Playfair Display', Sans-Serif;
+    margin-bottom: 20px;
+
+}
+
+.activity_description_description{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+}
+
+.activity_description_description p{
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
+    box-shadow: 2px 4px 8px #25AD99 ;
+
+
+}
+
+.line{
+    color: #25AD99;
+}
+
+.imageAndTitle{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.activity_description_title{
+    background-color:#25AD99;
+    display: flex;
+    align-items: center;
+
+}
+
+.activity_description_title h4{
+    transform: rotate(-90deg);
+}
+
+.static_title{
+    width: 70%;
+    margin: 0 auto;
+}
+
