@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './footer.css'
 import socialIcon from '../../icons/map.png'
 import template from '../../icons/template.svg'
+import mobile from '../../icons/mobile-phone.png'
+import phone from '../../icons/telephone.png'
+import pin from '../../icons/pin.png'
 
 
 function Footer() {
@@ -102,17 +105,35 @@ function Footer() {
                     </div>
                     <div className='footer_footer_column'>
                         <div className='footer_footer_link'>
-                            <h5>Rafting Links</h5>
-                            <ul>
-                                <li><a href='www.google.com'>link</a></li>
-                                <li><a href='www.google.com'>link</a></li>
-                                <li><a href='www.google.com'>link</a></li>
-                            </ul>
+                            <h5>Contact Info</h5>
+                            <p>Nunc lobortis mattis aliquam faucibus purus in massa arcu odio ut sem nulla pharetra diam amet.</p>
                         </div>
-                        <div className='achivments'>
-                            <h5>Achivments</h5>
-                            <p>Massa sed elementum tempus egestas sed sed risus at ultrices mi tempus imperdiet nulla.</p>
+                        <div className='contact_info'>
+                            <img src={pin} alt='map'/>
+                            <div className='contact_info_info'>
+                                <div><h5>Address:</h5></div>
+                                <div><p>Street Name, NY 38954</p></div>
+                            </div>
+
                         </div>
+                        <div className='contact_info'>
+                        <img src={phone} alt='map'/>
+                            <div className='contact_info_info'>
+                                <div><h5>Phone:</h5></div>
+                                <div><p>+9613949509</p></div>
+                            </div>
+
+                        </div>
+                        <div className='contact_info'>
+                        <img src={mobile} alt='map'/>
+                            <div className='contact_info_info'>
+                                <div><h5>Mobile:</h5></div>
+                                <div><p>+9618200230</p></div>
+                            </div>
+
+                        </div>
+
+
                     </div>
 
 
