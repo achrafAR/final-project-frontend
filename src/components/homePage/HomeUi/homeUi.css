@@ -44,7 +44,7 @@
 
 .btn_homeUi{
   padding: 15px 30px;
-  background-color:#25AD99;
+  background-color:#1e8c7e;
   width: 100px;
   cursor: pointer;
   margin: 10px 0;
@@ -54,7 +54,7 @@
 }
 
 .btn_homeUi:hover{
-  background-color: #18cfb4;
+  background-color: #25AD99;
 
 }
 

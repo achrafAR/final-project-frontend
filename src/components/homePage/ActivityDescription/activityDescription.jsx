@@ -41,7 +41,6 @@ function activityDescription() {
                                 <div className='activity_description_description'>
                                     <p>{activityDescription.description}</p>
                                 </div>
-                                <div className='line'>______________</div>
 
                                 <div className='imageAndTitle'>
                                     <div className='activity_description_image'>

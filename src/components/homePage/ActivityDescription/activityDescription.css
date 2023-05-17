@@ -2,6 +2,7 @@
     display: flex;
     padding:20px;
     align-items: center;
+    justify-content: space-between;
 
 }
 
@@ -13,7 +14,7 @@
 
 
 .template_backgroung_activity_description{
-    background: url(../../../icons/template.svg);
+    background: url(../../../icons/template.svg),#f8f9fb;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -32,24 +33,21 @@
 }
 
 .activity_description_description{
-    height: 70px;
+    height: 60px;
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 40%;
     background-color: white;
 }
 
 .activity_description_description p{
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
-    box-shadow: 2px 4px 8px #25AD99 ;
+    box-shadow: 2px 4px 8px #1e8c7e ;
     padding: 10px;
 
 
 }
 
-.line{
-    color: #25AD99;
-}
 
 .imageAndTitle{
     width: 50%;
@@ -58,7 +56,7 @@
 }
 
 .activity_description_title{
-    background-color:#25AD99;
+    background-color:#1e8c7e;
     display: flex;
     align-items: center;
 

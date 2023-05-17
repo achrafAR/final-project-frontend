@@ -7,16 +7,23 @@ import AssiRiver from './components/homePage/AsiRiver/asiRiver.jsx'
 import Welcome from './components/homePage/Welcome/welcome.jsx'
 import RaftingFounder from "./components/homePage/RaftingFounder/raftingFounder.jsx";
 import VideoDescription from "./components/homePage/VideoDescription/videoDescription.jsx";
+import OpeningDate from "./components/homePage/Opening/opening.jsx";
+import Gallery from './components/homePage/GalleryHomePage/galleryHomePage.jsx'
+import Footer from './components/Footer/Footer.jsx'
 function App() {
   return (
     <div className="App">
       <HomeUi />
       <Popular />
-      <Welcome/>
       <ActivityDescription />
-      <RaftingFounder/>
+      <Welcome/>
       <AssiRiver/>
+      <RaftingFounder/>
       <VideoDescription/>
+      <Welcome/>
+      <OpeningDate/>
+      <Gallery/>
+      <Footer/>
     </div>
   );
 }

@@ -9,7 +9,7 @@
 }
 
 .template_background {
-    background: url(../../../icons/template.svg);
+    background: url(../../../icons/template.svg),#f8f9fb;
     margin-top: 120px;
 
 
@@ -36,7 +36,7 @@
 
 
 .assi_river_btn:hover{
-    background-color: #18cfb4;
+    background-color: #1e8c7e;
 }
 
 .assi_river_title h5{

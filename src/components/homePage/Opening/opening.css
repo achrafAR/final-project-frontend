@@ -1,0 +1,65 @@
+.openingDate{
+    width:70%;
+    margin:0 auto;
+    display: flex;
+    margin-top: 120px;
+
+}
+
+.template_opening{
+    background: url(../../../icons/template.svg),#f8f9fb;
+
+}
+
+.opening_date_img{
+    background-color:#f8f9fb;
+    width:260px;
+    height: 300px;
+    border:1px solid;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+}
+
+.opening_date_images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+
+
+.opening_date_opening_date p{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: gray;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.opening_date_opening_title h5{
+    width: 200px;
+    background-color: #1e8c7e;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Playfair Display', Sans-Serif;
+
+}
+
+
+.opening_date_img img {
+    width: 240px;
+    height: 240px;
+    margin-top: 10px;
+}
+
+.opening_date_opening{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+
