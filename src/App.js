@@ -1,30 +1,25 @@
 import "./App.css";
-import HomeUi from "./components/homePage/HomeUi/homeUi.jsx";
-import Features from "./components/homePage/Features/Features.jsx";
-import Popular from "./components/homePage/Popular/Popular.jsx";
-import ActivityDescription from "./components/homePage/ActivityDescription/activityDescription";
-import AssiRiver from './components/homePage/AsiRiver/asiRiver.jsx'
-import Welcome from './components/homePage/Welcome/welcome.jsx'
-import RaftingFounder from "./components/homePage/RaftingFounder/raftingFounder.jsx";
-import VideoDescription from "./components/homePage/VideoDescription/videoDescription.jsx";
-import OpeningDate from "./components/homePage/Opening/opening.jsx";
-import Gallery from './components/homePage/GalleryHomePage/galleryHomePage.jsx'
-import Footer from './components/Footer/Footer.jsx'
+import HomePage from './pages/HomePage.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from "./pages/Login";
+import Header from "./components/Header/Header";
+import AboutUs from "./pages/AboutUs";
 function App() {
   return (
-    <div className="App">
-      <HomeUi />
-      <Popular />
-      <ActivityDescription />
-      <Welcome/>
-      <AssiRiver/>
-      <RaftingFounder/>
-      <VideoDescription/>
-      <Welcome/>
-      <OpeningDate/>
-      <Gallery/>
-      <Footer/>
-    </div>
+    <Router>
+      
+      <div className="App">
+        <Routes>
+          <Route path="/"  element={<HomePage/>} />
+          <Route path="/login"  element={<Login/>} />
+          <Route path="/aboutUs" element={<AboutUs/>}/>
+        </Routes>    
+      </div>
+    </Router>
+    // <div>
+    //   <LoginSignUp/>
+    // </div>
+    
   );
 }
 

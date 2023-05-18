@@ -1,12 +1,13 @@
 import React from "react";
 import "./header.css";
+import { Link } from 'react-router-dom';
 import accountIcon from "../../icons/login.png";
 function Header() {
   const navbar = [
     { name: "HOME", link: "/" },
-    { name: "OFFERS", link: "/" },
-    { name: "ABOUT US", link: "/" },
-    { name: "CONTACT US", link: "/" },
+    { name: "OFFERS", link: "/offers" },
+    { name: "ABOUT US", link: "/aboutUs" },
+    { name: "CONTACT US", link: "/contactUs" },
   ];
 
   return (
@@ -17,7 +18,7 @@ function Header() {
       <div className="header__nav">
         {navbar.map((item, index) => (
           <div key={index} className="header__nav__item">
-            <a href={item.link}>{item.name}</a>
+            <Link to={item.link}>{item.name}</Link>
           </div>
         ))}
       </div>

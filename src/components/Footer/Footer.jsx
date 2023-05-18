@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './footer.css'
-import socialIcon from '../../icons/map.png'
+import facebook from '../../icons/facebook.png'
+import instagram from '../../icons/instagram.png'
+import youtube from '../../icons/youtube.png'
+import twitter from '../../icons/twitter.png'
 import template from '../../icons/template.svg'
 import mobile from '../../icons/mobile-phone.png'
 import phone from '../../icons/telephone.png'
@@ -17,9 +20,11 @@ function Footer() {
         { name: "GALLERY", link: "/" },
     ];
     const socialMedia = [
-        { name: "Facebook", link: "/", icon: socialIcon },
-        { name: "Instagram", link: "/", icon: socialIcon },
-        { name: 'twitter', link: '/', icon: socialIcon }
+        { name: "Facebook", link: "/", icon: instagram },
+        { name: "Instagram", link: "/", icon: facebook },
+        { name: 'twitter', link: '/', icon: youtube },
+        { name: 'twitter', link: '/', icon: twitter }
+
     ]
 
     return (
@@ -38,20 +43,18 @@ function Footer() {
                         <div className="line"></div>
                         <ul className="nav-list">
                             <li className="nav-item">
-                                <a href="#" className="nav-link"><img src={socialIcon} /></a>
+                                <a href="#" className="nav-link"><img src={instagram} /></a>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link"><img src={socialIcon} /></a>
+                                <a href="#" className="nav-link"><img src={facebook} /></a>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link"><img src={socialIcon} /></a>
+                                <a href="#" className="nav-link"><img src={youtube} /></a>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link"><img src={socialIcon} /></a>
+                                <a href="#" className="nav-link"><img src={twitter} /></a>
                             </li>
-                            <li className="nav-item">
-                                <a href="#" className="nav-link"><img src='{socialIcon}' /></a>
-                            </li>
+                            
                         </ul>
                     </nav>
 

@@ -1,0 +1,181 @@
+.login_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container{
+    background: url(../../images/backgroundLogin.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.login_signUp {
+    background-color: rgb(52, 83, 83);
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 75vh;
+    padding: 1rem;
+    gap: 2rem;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.login_signUp_singUp {
+    background-color: rgb(52, 83, 83);
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 75vh;
+    padding: 1rem;
+    gap: 4.5rem;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+
+
+
+
+.login_signUp_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_signUp_form_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.login_signUp_button button {
+    padding: 15px 50px;
+    width: 40%;
+    cursor: pointer;
+    border: none;
+}
+
+
+.login_signUp_button button:hover {
+    background-color: #25AD99;
+}
+
+.login_signUp_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+.login_signUp_button_login button {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    cursor: pointer;
+    border: none;
+    margin-top: 10rem;
+    font-size: 30px;
+    color: white;
+    background-color: #1e8c7e;
+    font-family: "Playfair Display", Sans-Serif;
+    font-weight: 900;
+    border-radius: 5px;
+
+}
+
+.login_signUp_button_login_button_getStarted {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    cursor: pointer;
+    border: none;
+    font-size: 30px;
+    color: white;
+    background-color: #1e8c7e;
+    font-family: "Playfair Display", Sans-Serif;
+    font-weight: 900;
+    border-radius: 5px;
+
+}
+
+.login_signUp_button_login_getStarted {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.login_signUp_button_login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.login_signUp_title {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    color: white;
+}
+
+
+.login_signUp_button_form_form_input input {
+    background-color: #0000001a;
+    font-size: 20px;
+    width: 92%;
+    padding: 20px 15px;
+    border: 1px solid #448075;
+    border-radius: 5px;
+
+}
+
+
+
+.login_signUp_button_form_form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.login_signUp_button_form_form_input {
+    padding: 10px 0;
+
+}
+
+.login_signUp_button_button {
+    font-size: 20px;
+    color: white;
+    background-color: gray;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.login_signUp_button_button.active {
+    background-color: #1e8c7e;
+}
+
+.login_signUp_button_button:first-child {
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.login_signUp_button_button:last-child {
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
