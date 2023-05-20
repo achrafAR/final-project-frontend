@@ -8,6 +8,7 @@ import template from '../../icons/template.svg'
 import mobile from '../../icons/mobile-phone.png'
 import phone from '../../icons/telephone.png'
 import pin from '../../icons/pin.png'
+import whatsApp from '../../icons/whatsapp.png'
 
 
 function Footer() {
@@ -26,6 +27,13 @@ function Footer() {
         { name: 'twitter', link: '/', icon: twitter }
 
     ]
+
+    const whatsappNumber = '009613949509'; // Replace with your WhatsApp number
+
+    const openWhatsApp = () => {
+      const url = `https://wa.me/${whatsappNumber}`;
+      window.open(url, '_blank');
+    };
 
     return (
         <div className="footer">
@@ -133,7 +141,15 @@ function Footer() {
                                 <div><h5>Mobile:</h5></div>
                                 <div><p>+9618200230</p></div>
                             </div>
+                        
+                        
+                        </div>
 
+                        <div className='whatsapp_info'>
+                        <img src={whatsApp} alt='map' onClick={openWhatsApp}/>
+                            
+                        
+                        
                         </div>
 
 

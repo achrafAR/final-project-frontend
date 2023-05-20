@@ -24,7 +24,7 @@ function Popular() {
       <div className='popular_main'>
           {popular.map((popular, index) => {
             return (
-              <div className='destination'>
+              <div className='destination' key={index}>
 
               <div className='destination_info'>
                 <div className='destination_name'><h5>{popular.destinationName}</h5></div>

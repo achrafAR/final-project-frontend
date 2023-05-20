@@ -214,3 +214,15 @@
     margin-left: 15px;
 }
 
+.whatsapp_info img{
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    
+}
+.whatsapp_info {
+    display: flex;
+    justify-content: flex-start;
+}
+
