@@ -1,25 +1,25 @@
-// import React from 'react'
+import React from 'react'
 // import Icons from '../../images/destination.png'
-// import './mainDivComponent.css'
+import './mainDivComponent.css'
 
-// function mainDivComponent(props) {
+function MainDivComponent(props) {
 
-//     const data = props;
+    const {src, title, description} = props;
 
-//     return (
-//         <div className='mainDivComponent_container'>
-//             {data && data.map((data, index) => {
-//                 return (
-//                     <div className='mainDivComponent_container_details'>
-//                         <img src={data.icon} alt='map' />
-//                         <h5>{data.title}</h5>
-//                         <p>{data.description}</p>
-//                     </div>
-//                 )
-//             })}
+    return (
+        <div className='mainDivComponent_container'>
+            {/* {data && data.map((data, index) => { */}
+                {/* return ( */}
+                    <div className='mainDivComponent_container_details'>
+                        <img src={src} alt='map' />
+                        <h5>{title}</h5>
+                        <p>{description}</p>
+                    </div>
+                {/* ) */}
+            {/* })} */}
 
-//         </div>
-//     )
-// }
+        </div>
+    )
+}
 
-// export default mainDivComponent
+export default MainDivComponent

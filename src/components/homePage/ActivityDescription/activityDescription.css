@@ -7,7 +7,7 @@
 }
 
 .activity_description_container{
-    width: 70%;
+    width: 100%;
     margin: 0px auto;
 }
 
@@ -17,6 +17,8 @@
     background: url(../../../icons/template.svg),#f8f9fb;
     height: 80vh;
     display: flex;
+    width: 70%;
+    margin: 0 auto;
     align-items: center;
     
 }
@@ -36,23 +38,28 @@
     height: 60px;
     display: flex;
     align-items: center;
-    width: 40%;
+    justify-content: center;
+    width: 35%;
     background-color: white;
 }
 
 .activity_description_description p{
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
-    box-shadow: 2px 4px 8px #1e8c7e ;
+    box-shadow: 2px 2px 2px #1e8c7e ;
     padding: 10px;
 
 
 }
 
 
+
+
 .imageAndTitle{
-    width: 50%;
+    width: 35%;
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    margin-right: 110px;
 }
 
 .activity_description_title{
