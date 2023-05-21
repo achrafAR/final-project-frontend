@@ -5,25 +5,24 @@ import Login from "./pages/Login";
 import Header from "./components/Header/Header";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-// import MainDivComponent from "./components/mainDivComponent/mainDivComponent";
+import Offers from "./pages/Offers";
 function App() {
 
   return (
     <Router>
       
       <div className="App">
-        {/* <MainDivComponent/> */}
         <Routes>
           <Route path="/"  element={<HomePage/>} />
           <Route path="/login"  element={<Login/>} />
           <Route path="/aboutUs" element={<AboutUs/>}/>
           <Route path='/contactUs' element={<ContactUs/>}/>
+          <Route path='/offers' element={<Offers/>}/>
+
         </Routes>    
       </div>
     </Router>
-    // <div>
-    //   <LoginSignUp/>
-    // </div>
+    
     
   );
 }

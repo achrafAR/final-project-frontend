@@ -10,7 +10,7 @@ import Footer from '../../components/Footer/Footer'
 function AboutUs() {
     return (
         <div className="aboutUs">
-            <MainComp title="About Us" text="Battikh" backgroundName="ContactUs_hero" />
+            <MainComp title="About Us" text="Battikh" backgroundName="aboutUs_hero" />
             <MainDivComponent title='hello' description='helloooooooooooooo' src={icon} />
             <ActivityDescription />
             <div className="team">

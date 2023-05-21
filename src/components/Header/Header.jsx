@@ -7,6 +7,7 @@ function Header() {
   const navbar = [
     { name: "HOME", link: "/" },
     { name: "OFFERS", link: "/offers" },
+    { name: 'GALLERY', link: '/gallery'},
     { name: "ABOUT US", link: "/aboutUs" },
     { name: "CONTACT US", link: "/contactUs" },
   ];
@@ -18,7 +19,7 @@ function Header() {
     navigate("/login");
   };
   const logoutHandler = () => {
-    if (window.confirm("Are you sure")) {
+    if (window.confirm("Are you sure to logged out")) {
       localStorage.removeItem("userInfo");
       setLoggedOut(true);
     }
@@ -35,9 +36,12 @@ function Header() {
       </div>
       <div className="header__nav">
         {navbar.map((item, index) => (
+
           <div key={index} className="header__nav__item">
             <Link to={item.link}>{item.name}</Link>
           </div>
+
+          
         ))}
       </div>
       <div className="icon_login_explore">

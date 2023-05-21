@@ -10,7 +10,6 @@ import Footer from '../../components/Footer/Footer'
 function ContactUs() {
   return (
     <div className='contactUs_container'>
-      hello
       <MainComp title="Contact Us" text="Battikh" backgroundName="ContactUs_hero" />
       <MainDivComponent title='hello' description='helloooooooooooooo' src={icon} />
       <div className='contactUs_container_map_form'>

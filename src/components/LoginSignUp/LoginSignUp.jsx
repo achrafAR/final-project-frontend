@@ -43,7 +43,7 @@ function LoginForm({ toggleForm, activeButton }) {
         password,
       });
       localStorage.setItem("userInfo", JSON.stringify(response.data));
-      navigate("/"); // Redirect to the dashboard after successful login
+      navigate("/"); // Redirect to the homePage after successful login
     } catch (error) {
       console.error(error);
     }
@@ -52,7 +52,7 @@ function LoginForm({ toggleForm, activeButton }) {
   useEffect(() => {
     const userInfo = localStorage.getItem("userInfo");
     if (userInfo) {
-      // Redirect to the dashboard if user is already logged in
+      // Redirect to the homePage if user is already logged in
       navigate("/");
     }
   }, []);
