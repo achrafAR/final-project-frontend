@@ -6,6 +6,7 @@ function MainComp(props) {
   const { title, text, backgroundName } = props;
   return (
     <div className={backgroundName}>
+      <div className="backgroundName_filter">
       <Header />
       <div className="mainComp_container">
         <div className="mainComp_title">
@@ -17,6 +18,8 @@ function MainComp(props) {
           </div>
         </div>
       </div>
+      </div>
+      
     </div>
   );
 }
