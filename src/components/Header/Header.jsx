@@ -66,7 +66,7 @@ function Header() {
           </div>
         )}
         <div className="explore_btn">
-          <a href="www.google.com" className="explore_btn_header">
+          <a href="/offers" className="explore_btn_header">
             Explore Now
           </a>
         </div>

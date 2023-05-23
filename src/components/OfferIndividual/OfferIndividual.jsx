@@ -1,11 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './OfferIndividual.css'
 import MainComp from "../mainComponent/MainComp";
 import Image from '../../images/background.jpeg';
 import Footer from '../Footer/Footer';
+import Rating from 'react-rating';
+import { FaStar } from 'react-icons/fa';
+import { IconContext } from 'react-icons';
+
+import './OfferIndividual.css';
+
+
+
 
 
 function OfferIndividual() {
+
+
+  const [rating, setRating] = useState(0); // State to hold the rating value
+
+  const handleRatingChange = (newRating) => {
+    setRating(newRating);
+  };
+
   return (
     <div className='offerIndividual_hero'>
       <MainComp title="About Us" text="Battikh" backgroundName="offerIndividual_hero" />
@@ -42,7 +58,35 @@ function OfferIndividual() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <div className="your_own_review_container">
+        <div className="your_own_review">
+          <div className="your_own_review_title">
+            <h5>Create Your Own Review</h5>
+          </div>
+          <div className="your_own_review_text">
+            <form className="your_own_review_text_form">
+              <label>Full Name</label>
+              <input type="text" className='input_field_review' />
+              <label>Your Review</label>
+              <input type="text" className='last_input_review' />
+              <div className='your_own_review_rating'>
+                <label>Rating</label>
+                <IconContext.Provider value={{ className: 'star-empty' }}>
+                  <Rating
+                    initialRating={rating}
+                    emptySymbol={<FaStar />}
+                    fullSymbol={<FaStar />}
+                    fractions={2}
+                    onChange={handleRatingChange}
+                  />
+                </IconContext.Provider>
+              </div>
+              <button>Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   )
 }

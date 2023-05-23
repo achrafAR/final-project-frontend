@@ -30,7 +30,7 @@ function AsiRiver() {
                     <p>{assiRiver.description}</p>
                 </div>
                 <div className='assi_river_btn'>
-                    <a href='#'>Explore Now</a>
+                <a href='/offers'>Explore Now</a>
                 </div>
             </div>
         </div>

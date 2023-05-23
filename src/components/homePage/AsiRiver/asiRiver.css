@@ -60,10 +60,7 @@
 .assi_river_images {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
-    /* justify-content: center; */
-
-    /* align-items: center; */
+    width: 60%;
     gap: 20px;
     height: 63vh;
 }

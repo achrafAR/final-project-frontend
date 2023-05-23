@@ -127,7 +127,7 @@ function Offers() {
         return description;
     };
 
-    
+
 
 
 
@@ -163,54 +163,40 @@ function Offers() {
                     )))
                 }
             </div>
-            <div className="your_own_review_container">
-                <div className="your_own_review">
-                    <div className="your_own_review_title">
-                        <h5>Create Your Own Review</h5>
-                    </div>
-                    <div className="your_own_review_text">
-                        <form className="your_own_review_text_form">
-                            <label>Full Name</label>
-                            <input type="text" className='input_field_review' />
-                            <label>Your Review</label>
-                            <input type="text" className='last_input_review' />
-                            <button>Send</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
 
 
 
             <div className="review_Container">
-                <div className="reviews">
+                    <div className="reviews">
 
-                    {firstTenReviews.map((review, index) => {
-                        const isExpanded = expandedReviews.includes(index);
-                        const truncatedDescription = truncateDescription(review.description);
-                        return(
-                        <div className="review_card" key={index}>
-                            <div className="name_details">
-                                <div className="review-card-avatar">
-                                    <div className="avatar-circle">{review.name.charAt(0).toLocaleUpperCase()}</div>
-                                </div>
-                                <div className="review_card_name">
-                                    <h5>{review.name}</h5>
-                                </div>
-                            </div>
+                        {firstTenReviews.map((review, index) => {
+                            const isExpanded = expandedReviews.includes(index);
+                            const truncatedDescription = truncateDescription(review.description);
+                            return (
+                                <div className="review_card" key={index}>
+                                    <div className="name_details">
+                                        <div className="review-card-avatar">
+                                            <div className="avatar-circle">{review.name.charAt(0).toLocaleUpperCase()}</div>
+                                        </div>
+                                        <div className="review_card_name">
+                                            <h5>{review.name}</h5>
+                                        </div>
+                                    </div>
 
-                            <div className="review_card_description">
-                                <p className={isExpanded ? "expanded" : ""}
-                                    onClick={() => toggleReviewExpand(index)}>                    
-                                    {isExpanded ? review.description : truncatedDescription}
-                                </p>
-                            </div>
-                        </div>
-                        );
+                                    <div className="review_card_description">
+                                        <p className={isExpanded ? "expanded" : ""}
+                                            onClick={() => toggleReviewExpand(index)}>
+                                            {isExpanded ? review.description : truncatedDescription}
+                                        </p>
+                                    </div>
+                                </div>
+                            );
                         })}
 
 
                 </div>
+
                 <div className="review_button">
                     <button className="review_button_button" onClick={() => setShowReviewPage(true)}>Show All Review</button>
                     <PopupReview trigger={showReviewPage} setTrigger={setShowReviewPage}>
