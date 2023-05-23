@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Offers from "./pages/Offers";
+import Gallery from './pages/Gallery'
 function App() {
 
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path="/aboutUs" element={<AboutUs/>}/>
           <Route path='/contactUs' element={<ContactUs/>}/>
           <Route path='/offers' element={<Offers/>}/>
+          <Route path='/gallery' element={<Gallery/>}/>
+
 
         </Routes>    
       </div>

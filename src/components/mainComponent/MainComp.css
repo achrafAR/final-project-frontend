@@ -6,8 +6,15 @@
   height: 70vh;
 }
 
+.gallery_hero{
+  background: url("../../images/AboutUs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
 
-.ContactUs_hero {
+.contactUs_hero {
   background: url("../../images/destination.png");
   background-repeat: no-repeat;
   background-size: cover;
