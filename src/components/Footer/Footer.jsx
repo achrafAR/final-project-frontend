@@ -31,8 +31,8 @@ function Footer() {
     const whatsappNumber = '009613949509'; // Replace with your WhatsApp number
 
     const openWhatsApp = () => {
-      const url = `https://wa.me/${whatsappNumber}`;
-      window.open(url, '_blank');
+    const url = `https://wa.me/${whatsappNumber}`;
+    window.open(url, '_blank');
     };
 
     return (

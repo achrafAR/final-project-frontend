@@ -165,8 +165,10 @@
 }
 
 .slider-controler .slider-arrow ion-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #1e8c7e;
+    margin-top: 1.5rem;
+    
 }
 
 .slider-controler .slider-arrow::after {
@@ -185,4 +187,5 @@
 
 .swiper-pagination .swiper-pagination-bullet-active {
     background:#1e8c7e;
+
 }

@@ -14,6 +14,14 @@
   height: 70vh;
 }
 
+.offerIndividual_hero{
+  background: url("../../images/AboutUs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+
 .contactUs_hero {
   background: url("../../images/destination.png");
   background-repeat: no-repeat;
