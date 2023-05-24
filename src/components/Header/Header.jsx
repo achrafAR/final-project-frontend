@@ -3,14 +3,17 @@ import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
 import accountIcon from "../../icons/login.png";
 import powerOff from "../../icons/powerOff.png";
+import menuBar from '../../icons/menu-bar.png'
 function Header() {
   const navbar = [
     { name: "HOME", link: "/" },
     { name: "OFFERS", link: "/offers" },
-    { name: 'GALLERY', link: '/gallery'},
+    { name: 'GALLERY', link: '/gallery' },
     { name: "ABOUT US", link: "/aboutUs" },
     { name: "CONTACT US", link: "/contactUs" },
   ];
+  const [showPopup, setShowPopup] = useState(false);
+
   const [loggedOut, setLoggedOut] = useState(false);
   const userInfo = localStorage.getItem("userInfo");
 
@@ -23,6 +26,14 @@ function Header() {
       localStorage.removeItem("userInfo");
       setLoggedOut(true);
     }
+  };
+
+  const openPopup = () => {
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
   useEffect(() => {
     const userInfo = localStorage.getItem("userInfo");
@@ -41,7 +52,7 @@ function Header() {
             <Link to={item.link}>{item.name}</Link>
           </div>
 
-          
+
         ))}
       </div>
       <div className="icon_login_explore">
@@ -70,6 +81,62 @@ function Header() {
             Explore Now
           </a>
         </div>
+        <div className="header_icon_sidebar">
+          {showPopup && <Popup onClosePopup={closePopup} />}
+        </div>
+        <div className="header_icon_sidebar">
+
+        </div>
+
+        <div className="menu_bar">
+          <img
+            className="menu_bar_image"
+            onClick={openPopup}
+            src={menuBar}
+            alt="menuBar"
+          />
+        </div>
+
+
+
+
+      </div>
+
+
+    </div>
+  );
+}
+
+function Popup({ onClosePopup }) {
+
+  const navbar = [
+    { name: "HOME", link: "/" },
+    { name: "OFFERS", link: "/offers" },
+    { name: 'GALLERY', link: '/gallery' },
+    { name: "ABOUT US", link: "/aboutUs" },
+    { name: "CONTACT US", link: "/contactUs" },
+  ];
+  return (
+    <div className="popup_sidebar">
+      <div className="popup__content">
+        <div className="popup_sidebar_button">
+          <button className="popup__close" onClick={onClosePopup}>
+            X
+          </button>
+        </div>
+        <div className="popup_sidebar_ul">
+
+          <ul className="popup__list">
+            {navbar.map((item, index) => (
+              <li className="popup_list_li" key={index}>
+                <Link to={item.link}>{item.name}</Link>
+              </li>
+            ))
+
+            }
+          </ul>
+        </div>
+
       </div>
     </div>
   );

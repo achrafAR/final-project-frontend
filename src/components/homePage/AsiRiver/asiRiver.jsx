@@ -7,7 +7,7 @@ function AsiRiver() {
     const assiRiver = {
         title: 'Assi River',
         description:
-            'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+            'aaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaa',
         images: [background, background, background, background],
     };
 

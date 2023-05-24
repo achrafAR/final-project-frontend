@@ -28,10 +28,13 @@ function Popular() {
 
               <div className='destination_info'>
                 <div className='destination_name'><h5>{popular.destinationName}</h5></div>
+                <div className='destination_image_dark'>
                 <div className='destination_location'>
                   <img src={map} alt='Map' />
                   <span>{popular.location}</span>
                 </div>
+                </div>
+                
               </div>
               </div>
               

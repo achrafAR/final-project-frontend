@@ -1,6 +1,11 @@
-.features_main {
-  display: flex;
-}
+
+
+
+  .features_main {
+    display: flex;
+  }
+  
+
 
 .feature h2{
   color: white;
@@ -29,3 +34,12 @@
 .feature{
   margin-bottom: 2rem;
 }
+
+
+@media only screen and (max-width:420px) {
+
+.feature {
+display: none;  }
+  
+}
+

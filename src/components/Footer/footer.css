@@ -139,12 +139,7 @@
     font-family: "Playfair Display", Sans-Serif;
 }
 
-/* .bodour ul{
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    align-items: flex-start;
-} */
+
 
 .achivments h5 {
     font-size: 20px;
@@ -226,3 +221,20 @@
     justify-content: flex-start;
 }
 
+
+
+@media (max-width:420px) {
+    
+    .footer_container_header {
+        display: flex;
+        flex-direction: column;
+        background-color: RED;
+    }
+
+
+
+
+
+
+
+}
