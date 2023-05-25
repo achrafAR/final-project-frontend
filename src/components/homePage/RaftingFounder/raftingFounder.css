@@ -43,11 +43,14 @@
 
     @media only screen and (max-width:420px) {
 
+        
+
         .rafting_founder_container{
-            width: 90%;
             display: flex;
             flex-direction: column;
             gap:30px;
+            align-items: center;
+            justify-content: center;
         }
 
         .rafting_founder{

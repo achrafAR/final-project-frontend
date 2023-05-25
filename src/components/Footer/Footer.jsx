@@ -15,10 +15,10 @@ function Footer() {
 
     const navbar = [
         { name: "HOME", link: "/" },
-        { name: "OFFERS", link: "/" },
-        { name: "ABOUT US", link: "/" },
-        { name: "CONTACT US", link: "/" },
-        { name: "GALLERY", link: "/" },
+        { name: "OFFERS", link: "/offers" },
+        { name: "ABOUT US", link: "/aboutUs" },
+        { name: "CONTACT US", link: "/contactUs" },
+        { name: "GALLERY", link: "/gallery" },
     ];
     const socialMedia = [
         { name: "Facebook", link: "/", icon: instagram },
@@ -52,7 +52,7 @@ function Footer() {
                             <img src={facebook} alt="instagram" />
                             <img src={youtube} alt="instagram" />
                             <img src={twitter} alt="instagram" />
-                            <img src={whatsApp} alt="instagram" />
+                            <img onclick={openWhatsApp} src={whatsApp} alt="instagram" />
                         </div>
                     </div>
                     <nav className="nav">

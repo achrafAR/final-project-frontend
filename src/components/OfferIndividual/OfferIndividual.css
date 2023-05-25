@@ -85,6 +85,10 @@
 
 }
 
+.rating_input{
+    margin-top: 10px;
+}
+
 .book_now:hover{
     background-color: #25AD99;
 }
@@ -120,6 +124,7 @@
     border: 1px solid;
     cursor: pointer;
 }
+
 
 .offerIndividual_content_details_quantity{
     margin: 0;
@@ -198,8 +203,21 @@ input:focus {
 
 .your_own_review_container {
     background: url(../../icons/template.svg), #f8f9fb;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     margin-top: 120px;
+}
+
+.your_own_review_rating{
+    margin-top: 20px;
+}
+
+.your_own_review_rating span{
+    font-size:30px;
+    cursor: pointer;
+}
+
+.your_own_review_rating span:focus{
+    background-color: #1e8c7e;
 }

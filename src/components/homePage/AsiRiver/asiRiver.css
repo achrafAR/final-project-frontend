@@ -46,6 +46,7 @@
 }
 
 .assi_river_description p{
+    word-break: break-all;
     color: #4F4F4F;
     font-size: 16px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -88,7 +89,7 @@
 
 @media only screen and (max-width:420px) {
 
-    .template_background{
+.template_background{
         width: 100%;
         height: 110vh;
         display: flex;

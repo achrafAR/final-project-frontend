@@ -1,13 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './OfferIndividual.css'
 import MainComp from "../mainComponent/MainComp";
 import Image from '../../images/background.jpeg';
 import Footer from '../Footer/Footer';
-import Rating from 'react-rating';
-import { FaStar } from 'react-icons/fa';
-import { IconContext } from 'react-icons';
+import { FaStar } from 'react-icons/fa'
 
 import './OfferIndividual.css';
+import { startTransition } from 'react';
 
 
 
@@ -15,12 +14,45 @@ import './OfferIndividual.css';
 
 function OfferIndividual() {
 
+  const colors ={
+    green: '#1e8c7e',
+    grey: '#4F4F4f'
+  }
 
-  const [rating, setRating] = useState(0); // State to hold the rating value
 
-  const handleRatingChange = (newRating) => {
-    setRating(newRating);
+
+  const stars = Array(5).fill(0)
+  const [currentValue, setCurrentValue] = useState(0);
+  const [hoverValue, setHoverValue] = useState(undefined);
+
+  const handleClickRating = value => {
+    setCurrentValue(value);
+  }
+
+  const handleMouseHoverRating = value => {
+      setHoverValue(value)
+  }
+
+  const HandleMouseLeaveRating= () => {
+    setHoverValue(undefined)
+  }
+
+
+  const [quantity, setQuantity] = useState(1);
+
+
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
   };
+
+  const incrementQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  
+
 
   return (
     <div className='offerIndividual_hero'>
@@ -41,9 +73,9 @@ function OfferIndividual() {
           <div className='offerIndividual_content_details_quantity'>
             <h2>Quantity</h2>
             <div class="quantity-input">
-              <button class="decrement-btn">-</button>
-              <input type="text" class="quantity-field" value="1" min="1" />
-              <button class="increment-btn">+</button>
+              <button class="decrement-btn" onClick={decrementQuantity}>-</button>
+              <input type="text" class="quantity-field" value={quantity} min="1" />
+              <button class="increment-btn" onClick={incrementQuantity}>+</button>
             </div>
 
           </div>
@@ -71,15 +103,19 @@ function OfferIndividual() {
               <input type="text" className='last_input_review' />
               <div className='your_own_review_rating'>
                 <label>Rating</label>
-                <IconContext.Provider value={{ className: 'star-empty' }}>
-                  <Rating
-                    initialRating={rating}
-                    emptySymbol={<FaStar />}
-                    fullSymbol={<FaStar />}
-                    fractions={2}
-                    onChange={handleRatingChange}
-                  />
-                </IconContext.Provider>
+                <div class="rating_input">
+                  {stars.map((_, index) => {
+                    return (
+                      <FaStar
+                      key={index}
+                      size={24}
+                      color= {(hoverValue || currentValue) > index ? colors.green : colors.grey}
+                      onClick={() => handleClickRating(index+1)}
+                      onMouseOver ={() => handleMouseHoverRating(index+1)}
+                      onMouseLeave={HandleMouseLeaveRating}
+                      />
+                  )})}
+                </div>
               </div>
               <button>Send</button>
             </form>
