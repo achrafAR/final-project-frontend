@@ -132,7 +132,7 @@
 .popup_sidebar{
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
@@ -150,11 +150,11 @@
 
 .popup_sidebar_button {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .popup_sidebar_button button{
-  margin-right: 10px;
+  margin-left: 20px;
 }
 
 .popup__list{
@@ -168,7 +168,7 @@
 }
 
 .popup__content {
-  width: 50%;
+  width: 90%;
   position: absolute;
   top: 0;
   right: 10%;

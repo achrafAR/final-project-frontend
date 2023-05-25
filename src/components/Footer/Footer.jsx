@@ -46,6 +46,15 @@ function Footer() {
                             </div>
                         ))}
                     </div>
+                    <div className="footer_container_header_social">
+                        <div className='footer_container_header_social_images'>
+                            <img src={instagram} alt="instagram" />
+                            <img src={facebook} alt="instagram" />
+                            <img src={youtube} alt="instagram" />
+                            <img src={twitter} alt="instagram" />
+                            <img src={whatsApp} alt="instagram" />
+                        </div>
+                    </div>
                     <nav className="nav">
                         <h4 className="sm-header">Follow us on</h4>
                         <div className="line"></div>

@@ -64,3 +64,16 @@
 }
 
 
+
+
+@media only screen and (max-width:420px) {
+
+.openingDate{
+
+    display: flex;
+    flex-direction: column;
+
+}
+}
+
+

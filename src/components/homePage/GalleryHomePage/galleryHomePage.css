@@ -72,4 +72,28 @@
 }
 
 
-/* background-color: #1e8c7e; */
+
+@media only screen and (max-width:420px) {
+
+    .gallery_home_page_container{
+        width: 90%;
+    }
+
+    .gallery_home_page_title{
+        text-align: center;
+    }
+
+    .gallery_home_page_title h2{
+        font-size: 30px;
+    }
+
+    .gallery_home_page{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+    
+
+    }
