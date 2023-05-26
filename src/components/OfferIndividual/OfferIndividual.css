@@ -1,223 +1,212 @@
-.offerIndividual_content{
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    margin-top: 120px;
-    justify-content: space-around;
+.offerIndividual_content {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 120px;
+  justify-content: space-around;
 }
 
-.offerIndividual_content img{
-    width: 90%;
-    height: 50vh;
+.offerIndividual_content img {
+  width: 90%;
+  height: 50vh;
 }
 
-.offerIndividual_content_details{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+.offerIndividual_content_details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
-.offerIndividual_content_details_title h1{
-    font-size: 40px;
-    margin: 0;
-    font-family: 'Playfair Display', Sans-Serif;
+.offerIndividual_content_details_title h1 {
+  font-size: 40px;
+  margin: 0;
+  font-family: "Playfair Display", Sans-Serif;
 }
 
-.offerIndividual_content_details_title p{
-    font-size: 16px;
-    width: 70%;
-    margin: 0;
-    color: #4F4F4f;
-    font-family: 'Playfair Display', Sans-Serif;
+.offerIndividual_content_details_title p {
+  font-size: 16px;
+  width: 70%;
+  margin: 0;
+  color: #4f4f4f;
+  font-family: "Playfair Display", Sans-Serif;
 }
 
 .offerIndividual_content_details_button {
-    display: flex;
-    width: 70%;
-    gap:10px;
-    flex-direction: column;
-
+  display: flex;
+  width: 70%;
+  gap: 10px;
+  flex-direction: column;
 }
 
-.offerIndividual_content_details_title h5{
-    font-size: 20px;
-    padding: 10px 0;
-    margin: 0;
-    color: #4F4F4f;
-    margin-top: 10px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.offerIndividual_content_details_title h5 {
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 0;
+  color: #4f4f4f;
+  margin-top: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.offerIndividual_content_details_totalPrice h5{
-    font-size: 20px;
-    margin: 0;
-    color: #4F4F4f;
-    padding: 10px 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.offerIndividual_content_details_totalPrice h5 {
+  font-size: 20px;
+  margin: 0;
+  color: #4f4f4f;
+  padding: 10px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.offerIndividual_content_details_totalPrice h2{
-    margin: 0;
+.offerIndividual_content_details_totalPrice h2 {
+  margin: 0;
 }
 
-.offerIndividual_content_details_button button{
-    padding : 10px;
-    margin-top: 10px;
+.offerIndividual_content_details_button button {
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .add_to_kart {
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid;
-    cursor: pointer;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid;
+  cursor: pointer;
 }
 
 .add_to_kart:hover {
-    background-color: #1e8c7e;
+  background-color: #1e8c7e;
 }
 
-.book_now{
-    background-color: #1e8c7e;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid;
-
+.book_now {
+  background-color: #1e8c7e;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid;
 }
 
-.rating_input{
-    margin-top: 10px;
+.rating_input {
+  margin-top: 10px;
 }
 
-.book_now:hover{
-    background-color: #25AD99;
+.book_now:hover {
+  background-color: #25ad99;
 }
 
-.offerIndividual_content_details_title{
-    border-bottom: 1px solid #4F4F4f;
+.offerIndividual_content_details_title {
+  border-bottom: 1px solid #4f4f4f;
 }
 
-
-.offerIndividual_content_details_totalPrice{
-    border-bottom: 1px solid #4F4F4f;
-
+.offerIndividual_content_details_totalPrice {
+  border-bottom: 1px solid #4f4f4f;
 }
 
-.quantity-input{
-    margin: 0;
+.quantity-input {
+  margin: 0;
 }
 
-
-
-.quantity-input input{
-    border-radius: 0;
-    border: 1px solid;
-    height: 25px;
-    width: 25px;
-    text-align: center;
+.quantity-input input {
+  border-radius: 0;
+  border: 1px solid;
+  height: 25px;
+  width: 25px;
+  text-align: center;
 }
 
-.quantity-input button{
-    height: 29px;
-    width: 25px;
-    background-color: transparent;
-    border: 1px solid;
-    cursor: pointer;
+.quantity-input button {
+  height: 29px;
+  width: 25px;
+  background-color: transparent;
+  border: 1px solid;
+  cursor: pointer;
 }
 
-
-.offerIndividual_content_details_quantity{
-    margin: 0;
-    margin-bottom: 20px;
+.offerIndividual_content_details_quantity {
+  margin: 0;
+  margin-bottom: 20px;
 }
-
 
 .your_own_review {
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-
-
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .your_own_review form {
-    display: flex;
-    flex-direction: column;
-    width: 31%;
+  display: flex;
+  flex-direction: column;
+  width: 31%;
 }
 
 .input_field_review {
-    padding-bottom: 20px;
-    border: none;
-    margin-top: 10px;
-    border-bottom: 2px solid #4F4F4F;
-
+  padding-bottom: 20px;
+  border: none;
+  margin-top: 10px;
+  border-bottom: 2px solid #4f4f4f;
 }
 
 .last_input_review {
-    border: none;
-    margin-top: 10px;
-    border-bottom: 2px solid #4F4F4F;
-    padding-bottom: 100px;
+  border: none;
+  margin-top: 10px;
+  border-bottom: 2px solid #4f4f4f;
+  padding-bottom: 100px;
 }
 
-
-
 .your_own_review h5 {
-    font-size: 25px;
-    font-family: 'Playfair Display', Sans-Serif;
+  font-size: 25px;
+  font-family: "Playfair Display", Sans-Serif;
 }
 
 .your_own_review_text_form label {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #4F4F4F;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #4f4f4f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 input:focus {
-    outline: none;
-    font-size: 16px;
-    color: #4F4F4F;
-    display: flex;
-    border-bottom: 2px solid #1e8c7e;
+  outline: none;
+  font-size: 16px;
+  color: #4f4f4f;
+  display: flex;
+  border-bottom: 2px solid #1e8c7e;
 }
 
 .your_own_review button {
-    border-radius: 5px;
-    border: none;
-    margin-top: 20px;
-    background-color: #1e8c7e;
-    padding: 15px 35px;
-    width: 170px;
-    font-size: 20px;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  background-color: #1e8c7e;
+  padding: 15px 35px;
+  width: 170px;
+  font-size: 20px;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .your_own_review button:hover {
-    background-color: #25AD99;
-
+  background-color: #25ad99;
 }
-
 
 .your_own_review_container {
-    background: url(../../icons/template.svg), #f8f9fb;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    margin-top: 120px;
+  background: url(../../icons/template.svg), #f8f9fb;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  margin-top: 120px;
 }
 
-.your_own_review_rating{
-    margin-top: 20px;
+.your_own_review_rating {
+  margin-top: 20px;
 }
 
-.your_own_review_rating span{
-    font-size:30px;
-    cursor: pointer;
+.your_own_review_rating span {
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.your_own_review_rating span:focus{
-    background-color: #1e8c7e;
+.your_own_review_rating span:focus {
+  background-color: #1e8c7e;
 }

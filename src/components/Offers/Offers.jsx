@@ -8,13 +8,14 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ReviewPage from "../reviews/Reviews";
 import PopupReview from "./PopupReview";
+import { useNavigate } from "react-router-dom";
 
 
 
 function Offers() {
     const [showReviewPage, setShowReviewPage] = useState(false);
 
-
+    const navigate = useNavigate()
 
     const reviews = [
         { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
@@ -128,7 +129,9 @@ function Offers() {
     };
 
 
-
+    const navigateToOffer = (id) => {
+        navigate(`/offerIndividual/${id}`)
+    }
 
 
 
@@ -152,7 +155,9 @@ function Offers() {
                                 <StarRating rating={offer.rating} />
                             </div>
                             <div className="offers_hero_card_button">
-                                <button><h5>Book Now</h5></button>
+                                <button onClick={() => {
+                                    navigateToOffer(offer.id)
+                                }}><h5>Book Now</h5></button>
                             </div>
 
 

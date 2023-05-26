@@ -1,18 +1,24 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './popular.css'
-import destination from '../../../images/destination.png'
-
+import axios from 'axios'
 import map from '../../../icons/map.png'
 
 function Popular() {
 
-  const popular = [
-    { id: 1, destinationName: 'Ain Zarka', location: "hermel" },
-    { id: 1, destinationName: 'Ain Zarka', location: "hermel" },
-    { id: 1, destinationName: 'Ain Zarka', location: "hermel" },
-    { id: 1, destinationName: 'Ain Zarka', location: "hermel" }
+  const [popularDestination, setPopularDestination] = useState([])
 
-  ]
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/popular");
+        setPopularDestination(response.data.data);
+      } catch (error) {
+        console.log("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className='popular'>
@@ -22,12 +28,15 @@ function Popular() {
       </div>
 
       <div className='popular_main'>
-          {popular.map((popular, index) => {
-            return (
-              <div className='destination' key={index}>
+      {popularDestination.map((popular, index) => {
+          const backgroundImageStyle = {
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${popular.image})`,
+          };
+          return (
+              <div className='destination' key={index} style={backgroundImageStyle}>
 
               <div className='destination_info'>
-                <div className='destination_name'><h5>{popular.destinationName}</h5></div>
+                <div className='destination_name'><h5>{popular.title}</h5></div>
                 <div className='destination_image_dark'>
                 <div className='destination_location'>
                   <img src={map} alt='Map' />

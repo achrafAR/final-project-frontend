@@ -56,6 +56,7 @@ function LoginForm({ toggleForm, activeButton }) {
       navigate("/");
     }
   }, []);
+  
   return (
     <div className="login_container">
       <div className="login_signUp">

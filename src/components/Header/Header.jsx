@@ -4,14 +4,31 @@ import { Link, useNavigate } from "react-router-dom";
 import accountIcon from "../../icons/login.png";
 import powerOff from "../../icons/powerOff.png";
 import menuBar from '../../icons/menu-bar.png'
+import axios from "axios";
+
 function Header() {
-  const navbar = [
-    { name: "HOME", link: "/" },
-    { name: "OFFERS", link: "/offers" },
-    { name: 'GALLERY', link: '/gallery' },
-    { name: "ABOUT US", link: "/aboutUs" },
-    { name: "CONTACT US", link: "/contactUs" },
-  ];
+
+
+  const [navbar, setNavbar] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/pages");
+        setNavbar(response.data.data);
+      } catch (error) {
+        console.log("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
+
+
+  
   const [showPopup, setShowPopup] = useState(false);
 
   const [loggedOut, setLoggedOut] = useState(false);
@@ -25,6 +42,7 @@ function Header() {
     if (window.confirm("Are you sure to logged out")) {
       localStorage.removeItem("userInfo");
       setLoggedOut(true);
+      navigate("/")
     }
   };
 

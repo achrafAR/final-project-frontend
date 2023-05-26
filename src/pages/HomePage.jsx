@@ -3,7 +3,7 @@ import HomeUi from "../components/homePage/HomeUi/homeUi.jsx";
 import Popular from "../components/homePage/Popular/Popular.jsx";
 // import ActivityDescription from "../components/homePage/ActivityDescription/activityDescription";
 import AssiRiver from '../components/homePage/AsiRiver/asiRiver.jsx'
-import Welcome from '../components/homePage/Welcome/welcome.jsx'
+import Welcome from '../components/homePage/Welcome/Welcome.jsx'
 import RaftingFounder from "../components/homePage/RaftingFounder/raftingFounder.jsx";
 import VideoDescription from "../components/homePage/VideoDescription/videoDescription.jsx";
 import OpeningDate from "../components/homePage/Opening/opening.jsx";
