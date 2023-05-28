@@ -4,7 +4,7 @@ import MainDivComponent from "../mainDivComponent/mainDivComponent";
 import "./contactUs.css";
 import Footer from "../../components/Footer/Footer";
 import { useRef } from "react";
-// import emailjs from '@emailjs/browser';
+import emailjs from 'emailjs-com';
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -14,21 +14,22 @@ function ContactUs() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // emailjs
-    //   .sendForm(
-    //     "service_dwg8x0a",
-    //     "template_srb2aut",
-    //     formRef.current,
-    //     "SvfqYlAZDBTRKlpnH"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_dwg8x0a",
+        "template_srb2aut",
+        formRef.current,
+        "SvfqYlAZDBTRKlpnH"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          formRef.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
 
@@ -97,11 +98,11 @@ function ContactUs() {
             <label>First & Last Name *</label>
             <input type="text" className="input_field" id="name" name="name" />
             <label>Email Address *</label>
-            <input type="text" className="input_field" />
+            <input type="text" className="input_field" name="email" />
             <label>Subject</label>
-            <input type="text" className="input_field" />
+            <input type="text" className="input_field" name="subject" />
             <label>Comment or Message</label>
-            <input type="text" className="last_input" />
+            <input type="text" className="last_input" name="message" />
             <button onClick={sendEmail}>Send Message</button>
           </form>
         </div>

@@ -5,6 +5,7 @@ import accountIcon from "../../icons/login.png";
 import powerOff from "../../icons/powerOff.png";
 import menuBar from '../../icons/menu-bar.png'
 import axios from "axios";
+import logo from '../../icons/rafting.png'
 
 function Header() {
 
@@ -54,14 +55,14 @@ function Header() {
     setShowPopup(false);
   };
   useEffect(() => {
-    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    const userInfo = localStorage.getItem("userInfo");
     if (!userInfo && loggedOut) {
     }
   }, [loggedOut, userInfo]);
   return (
     <div className="header">
       <div className="header__logo">
-        <img className="logo" src={accountIcon} alt="login" />
+        <img className="logo" src={logo} alt="login" />
       </div>
       <div className="header__nav">
         {navbar.map((item, index) => (
@@ -127,13 +128,44 @@ function Header() {
 
 function Popup({ onClosePopup }) {
 
-  const navbar = [
-    { name: "HOME", link: "/" },
-    { name: "OFFERS", link: "/offers" },
-    { name: 'GALLERY', link: '/gallery' },
-    { name: "ABOUT US", link: "/aboutUs" },
-    { name: "CONTACT US", link: "/contactUs" },
-  ];
+  const [loggedOut, setLoggedOut] = useState(false);
+  const userInfo = localStorage.getItem("userInfo");
+
+  const navigate = useNavigate();
+  const navigateHandler = () => {
+    navigate("/login");
+  };
+  const logoutHandler = () => {
+    if (window.confirm("Are you sure to logged out")) {
+      localStorage.removeItem("userInfo");
+      setLoggedOut(true);
+      navigate("/")
+    }
+  };
+
+  useEffect(() => {
+    const userInfo = localStorage.getItem("userInfo");
+    if (!userInfo && loggedOut) {
+    }
+  }, [loggedOut, userInfo]);
+
+  const [navbar, setNavbar] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/pages");
+        setNavbar(response.data.data);
+      } catch (error) {
+        console.log("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
   return (
     <div className="popup_sidebar">
       <div className="popup__content">
@@ -153,6 +185,33 @@ function Popup({ onClosePopup }) {
 
             }
           </ul>
+          <div className="explore_and_button">
+            <div className="explore_and_button__explore">
+              <Link to="/offers">Explore</Link>
+            </div>
+            <div className="explore_and_button__login">
+            {!userInfo && (
+          <div className="explore_and_button_image">
+            <img
+              className="icon_login"
+              src={accountIcon}
+              alt="login"
+              onClick={navigateHandler}
+            />
+          </div>
+        )}
+        {userInfo && (
+          <div className="explore_and_button_image">
+            <img
+              className="icon_login"
+              src={powerOff}
+              alt="logout"
+              onClick={logoutHandler}
+            />
+          </div>
+        )}
+            </div>
+          </div>
         </div>
 
       </div>

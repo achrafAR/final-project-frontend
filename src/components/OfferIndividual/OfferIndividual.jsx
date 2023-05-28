@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./OfferIndividual.css";
 import MainComp from "../mainComponent/MainComp";
-// import Image from "../../images/background.jpeg";
 import Footer from "../Footer/Footer";
 import { FaStar } from "react-icons/fa";
 
@@ -10,7 +9,6 @@ import { startTransition } from "react";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-// import Offers from "../Offers/Offers.js";
 
 function OfferIndividual() {
   const colors = {
@@ -19,21 +17,22 @@ function OfferIndividual() {
   };
 
   const { id } = useParams();
+  
 
   const [offerIndividual, setOfferIndividual] = useState([]);
   // const [previousRating, setPreviousRating] = useState(0);
   const navigate = useNavigate();
+
+
   useEffect(() => {
-    const userInfo = localStorage.getItem("userInfo")? 
-    JSON.parse(localStorage.getItem('userInfo')) : {};
-
-
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     if (!userInfo) {
       // Redirect to the login page if the user is not logged in
       navigate("/login");
     }
     const getOffer = async () => {
       try {
+        console.log(id)
         const response = await axios.get(`http://localhost:5000/offers/${id}`)
         setOfferIndividual(response.data.data)
         setTotalRating(response.data.data.totalRating);
@@ -58,11 +57,11 @@ function OfferIndividual() {
   const [totalRating, setTotalRating] = useState(0)
   const [totalClick, setTotalClick] = useState(0)
   const [review, setReview] = useState([])
-
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
   const [addReview, setAddReview] = useState({
     name: "",
     description: "",
-    userId: "",
+    userId: userInfo._id
   });
   const handleChange = async (event) => {
     event.preventDefault();
@@ -79,22 +78,23 @@ function OfferIndividual() {
 
   const postReview = (event) => {
     event.preventDefault();
-    const formData = new FormData();
-    formData.append("name",addReview.name);
-    formData.append("description", addReview.description);
-    formData.append("userId",JSON.parse(localStorage.getItem('userInfo'))._id);
-
-    // console.log(formData)
-
-    const config = {
-      headers: { "content-type": "multipart/form-data" },
+    const data = {
+      name: addReview.name,
+      description: addReview.description,
+      userId: addReview.userId
     };
 
+    const config = {
+      headers: { "content-type": "application/json" },
+    };
+
+    console.log(data)
+
     axios
-      .post("http://localhost:5000/review", formData, config)
+      .post("http://localhost:5000/review", data, config)
       .then((response) => {
         setReview([...review, response.data]);
-        window.alert("product created successfully!");
+        window.alert("review created successfully!");
 
       })
       .catch((error) => {
@@ -225,12 +225,12 @@ const userId = localStorage.getItem("userId"); // Retrieve the userId from local
           <div className="your_own_review_text">
             <form className="your_own_review_text_form" onSubmit={postReview}>
               <label>Full Name</label>
-              <input type="text" className="input_field_review" name = "name"
+              <input type="text" className="input_field_review" name="name"
                           onChange={handleChange}
                           autoComplete='off'
                           />
               <label>Your Review</label>
-              <input type="text" className="last_input_review" name  = "description"
+              <input type="text" className="last_input_review" name="description"
               onChange={handleChange}
               autoComplete='off'/>
               <div className="your_own_review_rating">

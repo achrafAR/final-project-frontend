@@ -31,7 +31,7 @@ function Offers() {
         fetchData();
     }, []);
 
-    const firstThreeReviews = reviews.slice(0, 3); // Get the first 10 reviews
+    const firstThreeReviews = reviews.slice(-3); // Get the first 10 reviews
 
 
     const [offers, setOffers] = useState([])
