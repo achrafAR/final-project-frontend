@@ -13,6 +13,7 @@
 }
 
 .popup-inner {
+    width: 70%;
     position: relative;
     padding: 50px;
     /* background-color: transparent; */
@@ -45,4 +46,16 @@ position: absolute;
 
 .close-popup-icon:hover{
     color: white;
+}
+
+
+
+.review-card{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.review-page-content{
+    width: 100%;
 }

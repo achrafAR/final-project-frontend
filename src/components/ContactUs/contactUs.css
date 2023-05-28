@@ -43,9 +43,10 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.contactUs_container_map img{
+.contactUs_container_map iframe{
     width: 620px;
     height: 700px;
+    border-radius: 5px;
 }
 
 input:focus{
@@ -62,6 +63,7 @@ input:focus{
     background-color:#1e8c7e;
     padding: 15px 35px;
     width: 170px;
+    border-radius: 5px;
     color: white;
     font-size: 14px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -76,4 +78,64 @@ input:focus{
     margin-top: 10px;
     border-bottom: 2px solid #4F4F4F;
     padding-bottom: 140px;
+}
+
+.contactUs_details_maindiv{
+
+
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width:420px){
+
+    .contactUs_details_maindiv{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+
+
+    .contactUs_container_map_form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        width: 90%;
+        align-items: center;
+
+    }
+
+    .contactUs_container_map{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .contactUs_container_map_form iframe{
+        width: 380px;
+        height: 500px;
+
+    }
+
+    .contactUs_container_map_form form{
+        width: 380px;
+    }
+
+    .contact_container_form  {
+        width: 100%;
+    }
+
+
+
+
 }

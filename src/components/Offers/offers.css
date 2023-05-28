@@ -130,7 +130,7 @@
 .review_card {
   border: 1px solid;
   border-radius: 5px;
-  width: 33%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   background: url(../../icons/template.svg), #f8f9fb;
@@ -187,3 +187,5 @@
 .review_button button:hover {
   background-color: #25ad99;
 }
+
+

@@ -156,7 +156,8 @@
 
 .our_partner_icon img{
     width: 110px;
-    height: 35px;
+    height: 110px;
+    border-radius: 50%;
 }
 
 .our_partner_icon{
@@ -210,6 +211,10 @@
         justify-content: center;
     }
 
+    .activity_description_description p{
+        text-align: center;
+    }
+
     .mission_and_vision_details{
         display: flex;
         flex-direction: column;
@@ -229,6 +234,32 @@
     .mission_and_vision_title h5{
         text-align: center;
     }
+
+    .our_partner{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our_partner_title p{
+        width: 90%;
+    }
+
+    .our_partner_icon{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        gap:20px;
+    }
+
+    .our_partner_icon img{
+        width: 80px;
+        height: 80px;
+
+    }
+
+
 
 
 

@@ -2,10 +2,15 @@ import React, { useState, useEffect } from "react";
 import MainComp from "../mainComponent/MainComp";
 import MainDivComponent from "../mainDivComponent/mainDivComponent";
 import ActivityDescription from '../homePage/ActivityDescription/activityDescription'
-import icon from '../../icons/youtube.png'
 import './aboutUs.css'
 import Footer from '../../components/Footer/Footer'
 import axios from "axios";
+import Najjar from '../../icons/najjar.jpg'
+import pepesi from '../../icons/pepsi.png'
+import nakhle from '../../icons/nakhla.avif'
+import fantasia from '../../icons/fantasia.jpeg'
+import aqua from '../../icons/AquaDesign_Color_2020_2370x.webp'
+import cortina from '../../icons/cortina.png'
 
 
 
@@ -147,18 +152,15 @@ function AboutUs() {
             <div className="our_partner">
                 <div className="our_partner_title">
                     <h5>OUR PARTNER</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                    <p>We are proud to collaborate with a diverse network of trusted partners, fostering innovation and delivering exceptional value to our customers</p>
                 </div>
                 <div className="our_partner_icon">
-                    <img src={icon} alt='partner' />
-                    <img src={icon} alt='partner' />
-                    <img src={icon} alt='partner' />
-                    <img src={icon} alt='partner' />
-                    <img src={icon} alt='partner' />
-                    <img src={icon} alt='partner' />
+                    <img src={pepesi} alt='partner' />
+                    <img src={Najjar} alt='partner' />
+                    <img src={fantasia} alt='partner' />
+                    <img src={cortina} alt='partner' />
+                    <img src={aqua} alt='partner' />
+                    <img src={nakhle} alt='partner' />
 
                 </div>
             </div>
