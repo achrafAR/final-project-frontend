@@ -53,6 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 22vh;
 }
 
 
@@ -84,7 +85,7 @@
     padding: 20px 0;
     cursor: pointer;
     border: none;
-    margin-top: 10rem;
+    margin-top: 5rem;
     font-size: 30px;
     color: white;
     background-color: #1e8c7e;
@@ -107,7 +108,6 @@
     font-family: "Playfair Display", Sans-Serif;
     font-weight: 900;
     border-radius: 5px;
-
 }
 
 .login_signUp_button_login_getStarted {
@@ -179,3 +179,4 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+

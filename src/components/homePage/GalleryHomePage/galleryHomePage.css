@@ -37,6 +37,7 @@
     height: 50vh;
     margin-top: 5px;
     width: 100%;
+    filter: brightness(0.6);
 }
 
 .image_container:first-of-type {
@@ -44,7 +45,8 @@
 }
 
 .title {
-    width: 50%;
+    color: white;
+    width: 250px;
     margin-bottom: 10px;
     font-size: 30px;
     font-family: "Playfair Display", Sans-Serif;

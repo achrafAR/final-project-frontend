@@ -50,7 +50,7 @@ function LoginForm({ toggleForm, activeButton }) {
   };
 
   useEffect(() => {
-    const userInfo = localStorage.getItem("userInfo");
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     if (userInfo) {
       // Redirect to the homePage if user is already logged in
       navigate("/");

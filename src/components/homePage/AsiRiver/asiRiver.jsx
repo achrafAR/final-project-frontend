@@ -11,6 +11,7 @@ function AsiRiver() {
             try {
                 const response = await axios.get("http://localhost:5000/asiRiver");
                 setAssiRiver(response.data.data);
+                console.log(response.data.data)
             } catch (error) {
                 console.log("Error fetching data:", error);
             }
@@ -26,7 +27,7 @@ function AsiRiver() {
         <div className='template_background'>
             <div className='assi_river_container'>
                 <div className='assi_river_images'>
-                    {assiRiver && assiRiver[0].image && Array.isArray(assiRiver[0].image) ? (
+                    {assiRiver[0] && assiRiver[0].image && Array.isArray(assiRiver[0].image) ? (
                         assiRiver[0].image.map((image, index) => (
                             <div className='assi_river_image' key={index}>
                                 <img src={image} alt='assi river' />

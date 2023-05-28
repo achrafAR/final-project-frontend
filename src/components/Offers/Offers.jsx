@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MainComp from "../mainComponent/MainComp";
 import './offers.css'
-import cardImage from '../../images/offersHero.jpg'
+// import cardImage from '../../images/offersHero.jpg'
 import Footer from '../../components/Footer/Footer'
 import StarRating from "../StarRating/StarRating";
 import 'slick-carousel/slick/slick.css';
@@ -9,101 +9,45 @@ import 'slick-carousel/slick/slick-theme.css';
 import ReviewPage from "../reviews/Reviews";
 import PopupReview from "./PopupReview";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 
 function Offers() {
     const [showReviewPage, setShowReviewPage] = useState(false);
-
+    const [reviews, setReviews] = useState([])
     const navigate = useNavigate()
 
-    const reviews = [
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaccccccccccccccccccccccccccccccccccccccccccccccccccccccc' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-        { name: 'achraf', description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-    ]
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("http://localhost:5000/review");
+                setReviews(response.data);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
 
-    const firstTenReviews = reviews.slice(0, 3); // Get the first 10 reviews
+        fetchData();
+    }, []);
+
+    const firstThreeReviews = reviews.slice(0, 3); // Get the first 10 reviews
 
 
+    const [offers, setOffers] = useState([])
 
-    const offers = [
-        {
-            id: 1,
-            title: "Offer 1",
-            price: 10,
-            rating: 2,
-            image: cardImage,
-        },
-        {
-            id: 1,
-            title: "Offer 1",
-            price: 10,
-            rating: 4,
-            image: cardImage,
-        },
-        {
-            id: 1,
-            title: "Offer 1",
-            price: 10,
-            rating: 4,
-            image: cardImage,
-        },
-        {
-            id: 1,
-            title: "Offer 1",
-            price: 10,
-            rating: 4,
-            image: cardImage,
-        },
-        {
-            id: 1,
-            title: "Offer 1",
-            price: 10,
-            rating: 4,
-            image: cardImage,
-        },
-        {
-            id: 1,
-            title: "Offer 1",
-            price: 10,
-            rating: 4,
-            image: cardImage,
-        },
-        {
-            id: 1,
-            title: "Offer 1",
-            price: 10,
-            rating: 4,
-            image: cardImage,
-        },
-        {
-            id: 1,
-            title: "Offer 1",
-            price: 10,
-            rating: 4,
-            image: cardImage,
-        }
-    ]
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("http://localhost:5000/offers");
+                setOffers(response.data.data);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     const [expandedReviews, setExpandedReviews] = useState([]);
 
@@ -133,17 +77,35 @@ function Offers() {
         navigate(`/offerIndividual/${id}`)
     }
 
+    const [offersMain, setOffersMain] = useState([])
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("http://localhost:5000/offersMain");
+                setOffersMain(response.data.data);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <div className="offers">
-            <MainComp title="Offers" text="Battikh" backgroundName="offers_hero" />
+            {offersMain.length > 0 && (
+                    <MainComp title={offersMain[0].title} text={offersMain[0].description} backgroundName={offersMain[0].backgroundName} />
+
+                )
+            }
+
             <div className="offers_hero_title"><h5>
                 Don't Hesitate, Book Now
             </h5>
             </div>
             <div className="offers_hero_cards">
-                {offers.map((offer, index) => (
+                {offers && offers.map((offer, index) => (
                     (
                         <div className="offers_hero_card" key={index}>
                             <div className='offers_hero_card_img'>
@@ -156,7 +118,7 @@ function Offers() {
                             </div>
                             <div className="offers_hero_card_button">
                                 <button onClick={() => {
-                                    navigateToOffer(offer.id)
+                                    navigateToOffer(offer._id)
                                 }}><h5>Book Now</h5></button>
                             </div>
 
@@ -175,7 +137,7 @@ function Offers() {
             <div className="review_Container">
                     <div className="reviews">
 
-                        {firstTenReviews.map((review, index) => {
+                        {firstThreeReviews && firstThreeReviews.map((review, index) => {
                             const isExpanded = expandedReviews.includes(index);
                             const truncatedDescription = truncateDescription(review.description);
                             return (

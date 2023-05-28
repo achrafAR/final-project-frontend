@@ -54,7 +54,7 @@ function Header() {
     setShowPopup(false);
   };
   useEffect(() => {
-    const userInfo = localStorage.getItem("userInfo");
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     if (!userInfo && loggedOut) {
     }
   }, [loggedOut, userInfo]);

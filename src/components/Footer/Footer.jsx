@@ -31,8 +31,8 @@ function Footer() {
     const whatsappNumber = '009613949509'; // Replace with your WhatsApp number
 
     const openWhatsApp = () => {
-    const url = `https://wa.me/${whatsappNumber}`;
-    window.open(url, '_blank');
+        const url = `https://wa.me/${whatsappNumber}`;
+        window.open(url, '_blank');
     };
 
     return (
@@ -71,7 +71,7 @@ function Footer() {
                             <li className="nav-item">
                                 <a href="#" className="nav-link"><img src={twitter} /></a>
                             </li>
-                            
+
                         </ul>
                     </nav>
 
@@ -84,9 +84,9 @@ function Footer() {
                         <div className='footer_footer_link'>
                             <h5>Rafting Links</h5>
                             <ul>
-                                <li><a href='www.google.com'>link</a></li>
-                                <li><a href='www.google.com'>link</a></li>
-                                <li><a href='www.google.com'>link</a></li>
+                                <li><a href='https://en.wikipedia.org/wiki/Rafting'>Rafting Wikipedia</a></li>
+                                <li><a href='https://www.rei.com/learn/expert-advice/what-to-wear-whitewater-rafting.html'>What wo wear</a></li>
+                                <li><a href='https://www.topendsports.com/sport/list/rafting.htm'>Rafting overview</a></li>
                             </ul>
                         </div>
                         <div className='achivments'>
@@ -97,11 +97,11 @@ function Footer() {
 
                     <div className='footer_footer_column'>
                         <div className='footer_footer_link'>
-                            <h5>Rafting Links</h5>
+                            <h5>Kayak links Links</h5>
                             <ul>
-                                <li><a href='www.google.com'>link</a></li>
-                                <li><a href='www.google.com'>link</a></li>
-                                <li><a href='www.google.com'>link</a></li>
+                                <li><a href='www.canoeicf.com'>International Canoe</a></li>
+                                <li><a href='www.paddle.org.au'>Paddle Australia</a></li>
+                                <li><a href='www.iwhof.org'>International Whitewater</a></li>
                             </ul>
                         </div>
                         <div className='achivments'>
@@ -111,11 +111,12 @@ function Footer() {
                     </div>
                     <div className='footer_footer_column'>
                         <div className='footer_footer_link'>
-                            <h5>Rafting Links</h5>
+                            <h5>Hermel Links</h5>
                             <ul>
-                                <li><a href='www.google.com'>link</a></li>
-                                <li><a href='www.google.com'>link</a></li>
-                                <li><a href='www.google.com'>link</a></li>
+                                <li><a href='https://en.wikipedia.org/wiki/Orontes_River'>Orontes River
+                                </a></li>
+                                <li><a href='https://www.lbcgroup.tv/news/news-bulletin-reports/651107/hermel-as-never-seen-before-report/en'>Hermel By LBC</a></li>
+                                <li><a href='https://en.wikipedia.org/wiki/Hermel'>Hermel Wikipedia</a></li>
                             </ul>
                         </div>
                         <div className='achivments'>
@@ -129,15 +130,15 @@ function Footer() {
                             <p>Nunc lobortis mattis aliquam faucibus purus in massa arcu odio ut sem nulla pharetra diam amet.</p>
                         </div>
                         <div className='contact_info'>
-                            <img src={pin} alt='map'/>
+                            <img src={pin} alt='map' />
                             <div className='contact_info_info'>
                                 <div><h5>Address:</h5></div>
-                                <div><p>Street Name, NY 38954</p></div>
+                                <div><p>Lebanon-Bekaa-Hermel</p></div>
                             </div>
 
                         </div>
                         <div className='contact_info'>
-                        <img src={phone} alt='map'/>
+                            <img src={phone} alt='map' />
                             <div className='contact_info_info'>
                                 <div><h5>Phone:</h5></div>
                                 <div><p>+9613949509</p></div>
@@ -145,20 +146,20 @@ function Footer() {
 
                         </div>
                         <div className='contact_info'>
-                        <img src={mobile} alt='map'/>
+                            <img src={mobile} alt='map' />
                             <div className='contact_info_info'>
                                 <div><h5>Mobile:</h5></div>
                                 <div><p>+9618200230</p></div>
                             </div>
-                        
-                        
+
+
                         </div>
 
                         <div className='whatsapp_info'>
-                        <img src={whatsApp} alt='map' onClick={openWhatsApp}/>
-                            
-                        
-                        
+                            <img src={whatsApp} alt='map' onClick={openWhatsApp} />
+
+
+
                         </div>
 
 

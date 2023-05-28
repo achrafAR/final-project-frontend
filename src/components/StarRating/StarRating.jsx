@@ -2,11 +2,11 @@ import React from 'react';
 import './starRating.css'
 
 const StarRating = ({ rating }) => {
-    const filledStars = Array.from({ length: rating }, (_, index) => (
+    const filledStars = Array.from({ length: Math.floor(rating) }, (_, index) => (
         <span key={index}>&#9733;</span>
     ));
 
-    const emptyStars = Array.from({ length: 5 - rating }, (_, index) => (
+    const emptyStars = Array.from({ length: 5 - Math.floor(rating) }, (_, index) => (
         <span key={index + rating}>&#9734;</span>
     ));
 
@@ -19,3 +19,6 @@ const StarRating = ({ rating }) => {
 };
 
 export default StarRating;
+
+
+
