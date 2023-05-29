@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./OfferIndividual.css";
 import MainComp from "../mainComponent/MainComp";
 import Footer from "../Footer/Footer";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import "./OfferIndividual.css";
 import { startTransition } from "react";
-import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import { forwardRef } from "react";
 
 function OfferIndividual() {
   const colors = {
@@ -29,6 +30,7 @@ function OfferIndividual() {
     if (!userInfo) {
       // Redirect to the login page if the user is not logged in
       navigate("/login");
+
     }
     const getOffer = async () => {
       try {
@@ -48,7 +50,6 @@ function OfferIndividual() {
     getOffer();
   }, [id]);
 
-  
 
 
   const stars = Array(5).fill(0);
@@ -58,14 +59,16 @@ function OfferIndividual() {
   const [totalClick, setTotalClick] = useState(0)
   const [review, setReview] = useState([])
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  const userId = userInfo && userInfo._id
+
   const [addReview, setAddReview] = useState({
     name: "",
     description: "",
-    userId: userInfo._id
+    userId: userId
   });
+
   const handleChange = async (event) => {
     event.preventDefault();
-
     const fieldName = event.target.getAttribute("name");
     let fieldValue = event.target.value;
 
@@ -78,10 +81,11 @@ function OfferIndividual() {
 
   const postReview = (event) => {
     event.preventDefault();
+    // const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     const data = {
       name: addReview.name,
       description: addReview.description,
-      userId: addReview.userId
+      userId:userId
     };
 
     const config = {
@@ -100,6 +104,7 @@ function OfferIndividual() {
       .catch((error) => {
         console.log(error.response.data);
       });
+
 
   };
 
@@ -155,7 +160,7 @@ function OfferIndividual() {
   }, [quantity, offerIndividual.price]);
 
 
-const userId = localStorage.getItem("userId"); // Retrieve the userId from localStorage
+// const userId = localStorage.getItem("userId"); // Retrieve the userId from localStorage
 
 
   
@@ -163,8 +168,8 @@ const userId = localStorage.getItem("userId"); // Retrieve the userId from local
   return (
     <div className="offerIndividual_hero">
       <MainComp
-        title="About Us"
-        text="Battikh"
+        title="Offer"
+        text="Show more about this offer"
         backgroundName="offerIndividual_hero"
       />
 
@@ -204,7 +209,7 @@ const userId = localStorage.getItem("userId"); // Retrieve the userId from local
           </div>
           <div className="offerIndividual_content_details_button">
             <button className="add_to_kart">Add To Kart</button>
-            <button className="book_now">Book Now</button>
+            <Link className="book_now" to='/booking'>My Booking</Link>
           </div>
         </div>
 
@@ -223,7 +228,8 @@ const userId = localStorage.getItem("userId"); // Retrieve the userId from local
             <h5>Create Your Own Review</h5>
           </div>
           <div className="your_own_review_text">
-            <form className="your_own_review_text_form" onSubmit={postReview}>
+            <form className="your_own_review_text_form" onSubmit={postReview}         
+            >
               <label>Full Name</label>
               <input type="text" className="input_field_review" name="name"
                           onChange={handleChange}

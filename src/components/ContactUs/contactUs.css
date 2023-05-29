@@ -80,9 +80,9 @@ input:focus{
     padding-bottom: 140px;
 }
 
+
+
 .contactUs_details_maindiv{
-
-
     display: flex;
     width: 70%;
     margin: 0 auto;
@@ -101,6 +101,8 @@ input:focus{
         justify-content: center;
 
     }
+
+
 
 
 

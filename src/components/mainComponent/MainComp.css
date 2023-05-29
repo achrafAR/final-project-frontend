@@ -15,7 +15,15 @@
 }
 
 .offerIndividual_hero{
-  background: url("../../images/AboutUs.jpg");
+  background: url("../../images/julie-thornton-UWdgTvf3m8g-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+
+.MyBooking_hero{
+  background: url("../../images/pexels-martin-uradnicek-12384267.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -31,7 +39,7 @@
 }
 
 .offers_hero {
-  background: url("../../images/offersHero.jpg");
+  background: url("../../images/julie-thornton-UWdgTvf3m8g-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

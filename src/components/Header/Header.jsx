@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
-import accountIcon from "../../icons/login.png";
-import powerOff from "../../icons/powerOff.png";
+// import accountIcon from "../../icons/login.png";
+// import powerOff from "../../icons/powerOff.png";
 import menuBar from '../../icons/menu-bar.png'
 import axios from "axios";
 import logo from '../../icons/rafting.png'
@@ -77,22 +77,18 @@ function Header() {
       <div className="icon_login_explore">
         {!userInfo && (
           <div className="icon_account">
-            <img
+            <Link to='/login'
               className="icon_login"
-              src={accountIcon}
-              alt="login"
               onClick={navigateHandler}
-            />
+            >Login</Link>
           </div>
         )}
         {userInfo && (
           <div className="icon_account">
-            <img
+            <Link to='/'
               className="icon_login"
-              src={powerOff}
-              alt="logout"
               onClick={logoutHandler}
-            />
+            >Logout</Link>
           </div>
         )}
         <div className="explore_btn">
@@ -192,22 +188,20 @@ function Popup({ onClosePopup }) {
             <div className="explore_and_button__login">
             {!userInfo && (
           <div className="explore_and_button_image">
-            <img
+            <Link
               className="icon_login"
-              src={accountIcon}
-              alt="login"
+              to="/login"   
               onClick={navigateHandler}
-            />
+            >Login</Link>
           </div>
         )}
         {userInfo && (
           <div className="explore_and_button_image">
-            <img
+            <Link
+              to='/'
               className="icon_login"
-              src={powerOff}
-              alt="logout"
               onClick={logoutHandler}
-            />
+            >Logout</Link>
           </div>
         )}
             </div>
