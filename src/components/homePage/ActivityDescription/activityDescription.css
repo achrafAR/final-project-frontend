@@ -116,5 +116,10 @@
         flex-direction: row;
     }
 
+    .static_title {
+        display: flex;
+        justify-content: center;
+    }
+
 }
 
