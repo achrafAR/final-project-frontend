@@ -38,13 +38,15 @@ function LoginForm({ toggleForm, activeButton }) {
   const handlerSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/user/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://raftinglb.onrender.com//user/login",
+        {
+          email,
+          password,
+        }
+      );
       localStorage.setItem("userInfo", JSON.stringify(response.data));
       navigate("/"); // Redirect to the homePage after successful login
-
     } catch (error) {
       console.error(error);
     }
@@ -57,7 +59,7 @@ function LoginForm({ toggleForm, activeButton }) {
       navigate("/");
     }
   }, []);
-  
+
   return (
     <div className="login_container">
       <div className="login_signUp">
