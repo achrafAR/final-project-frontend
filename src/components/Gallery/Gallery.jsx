@@ -15,7 +15,7 @@ import Image from "../../images/destination.png";
 function App() {
   return (
     <div className="gallery">
-      <MainComp title="About Us" text="Battikh" backgroundName="gallery_hero" />
+      <MainComp title="Gallery" text="Battikh" backgroundName="gallery_hero" />
       <div className="container_slider">
         <h1 className="heading">Rafting Gallery</h1>
         <div className="gallery_container">

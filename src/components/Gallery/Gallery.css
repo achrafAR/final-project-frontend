@@ -215,3 +215,22 @@
     height: 120vh;
   }
 }
+
+@media only screen and (max-width:480px) {
+  .container_slider{
+    zoom: 0.6;
+    margin-top: 100px;
+    
+    
+  }
+  
+
+
+  .heading{
+    margin-bottom: 100px;
+  }
+
+  .gallery_container{
+    height: 100vh;
+  }
+}

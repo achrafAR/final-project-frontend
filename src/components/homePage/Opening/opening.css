@@ -77,3 +77,22 @@
 }
 
 
+@media only screen and (max-width:480px) {
+
+    .openingDate{
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .opening_date_images{
+        margin-top: 15px;
+    }
+
+
+    }
+
+

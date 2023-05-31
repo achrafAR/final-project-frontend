@@ -141,3 +141,55 @@ input:focus{
 
 
 }
+
+
+@media only screen and (max-width:480px){
+
+    .contactUs_details_maindiv{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .contactUs_container_map_form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        width: 90%;
+        align-items: center;
+
+    }
+
+    .contactUs_container_map{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .contactUs_container_map_form iframe{
+        width: 430px;
+        height: 500px;
+
+    }
+
+    .contactUs_container_map_form form{
+        width: 380px;
+    }
+
+    .contact_container_form  {
+        width: 100%;
+    }
+
+    .mainComp_title{
+        width: 400px;
+    }
+
+
+
+
+}

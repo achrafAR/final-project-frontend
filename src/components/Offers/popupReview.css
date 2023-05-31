@@ -82,3 +82,32 @@ position: absolute;
 
 
 }
+
+
+@media only screen and (max-width:480px){
+
+
+
+    .review-card{
+        width: 100%;
+    }
+
+    .review-page-content{
+        width: 100%;
+    }
+
+    .review-page{
+        width: 100%;
+    }
+
+    .review-card-description p{
+        width: 260px;
+    }
+
+    
+
+
+
+
+
+}

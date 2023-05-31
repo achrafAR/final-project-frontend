@@ -274,3 +274,114 @@
 
 
 }
+
+@media only screen and (max-width:480px){
+
+    .mainDivComponents_aboutUs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+
+}
+
+    .team{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .static_title{
+        display: flex;
+        align-items: center;
+    }
+
+    .team_container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .team_details_details h5{
+            margin: 0;
+    }
+
+    .team_details_details{
+        gap:10px;
+    }
+
+
+    .mission_and_vision{
+        height: 130vh;
+    }
+
+    .mission_and_vision_main{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .activity_description_description p{
+        text-align: center;
+    }
+
+    .mission_and_vision_details{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .team_details_details img{
+        width: 360px;
+        height: 460px;
+    }
+
+    .mission_and_vision_detail{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .mission_and_vision_detail p{
+        text-align: center;
+    }
+
+    .mission_and_vision_title h5{
+        text-align: center;
+    }
+
+    .our_partner{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our_partner_title p{
+        width: 90%;
+    }
+
+    .our_partner_icon{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        gap:30px;
+    }
+
+    .our_partner_icon img{
+        width: 90px;
+        height: 90px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+}

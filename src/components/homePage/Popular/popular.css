@@ -131,4 +131,44 @@
 
 
 
+@media only screen and (max-width:480px) {
+
+    .popular{
+        width: 90%;
+    }
+
+    .destination_title{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .destination_title h2{
+        font-size: 30px;
+    }
+
+    .popular_main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap:20px;
+    }
+
+    .destination{
+        display: flex;
+        width: 100%;
+        height: 480px;
+    }
+
+
+
+
+    
+}
+
+
+
+
 

@@ -281,3 +281,64 @@ input:focus {
 
 
 }
+
+@media only screen and (max-width:480px){
+
+  .offerIndividual_content_details_button{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  
+  }
+  
+  
+  
+  
+  .offerIndividual_content_details_button button{
+    width: 70%;
+  }
+  
+  .offerIndividual_content_details_button a{
+    width: 65%;
+  }
+  
+  
+    .offerIndividual_content{
+      display: flex;
+      width: 90%;
+      flex-direction: column;
+    }
+  
+    .offerIndividual_content_image img{
+      width: 440px;
+    }
+  
+    .offerIndividual_content_image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .offerIndividual_content_details{
+      margin-top: 40px;
+      display: flex;
+      width: 440px;
+    }
+  
+    .your_own_review{
+      width: 440px;
+    }
+    .your_own_review_text_form input{
+      width: 380px;
+    }
+    .your_own_review_rating{
+      width: 200px;
+    }
+  
+  
+  
+  
+  
+  
+  
+  }
