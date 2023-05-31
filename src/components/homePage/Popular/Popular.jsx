@@ -10,7 +10,7 @@ function Popular() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/popular");
+        const response = await axios.get("https://raftinglb.onrender.com/popular");
         setPopularDestination(response.data.data);
       } catch (error) {
         console.log("Error fetching data:", error);

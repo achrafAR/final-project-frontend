@@ -10,7 +10,7 @@ function Opening() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/opening");
+                const response = await axios.get("https://raftinglb.onrender.com/opening");
                 setOpeningDate(response.data.data);
                 console.log(openingDate)
             } catch (error) {

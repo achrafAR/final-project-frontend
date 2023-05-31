@@ -17,7 +17,7 @@ function GalleryHomePage() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/galleryHomePage");
+                const response = await axios.get("https://raftinglb.onrender.com/galleryHomePage");
                 setGalleryHomePage(response.data.data);
                 console.log(response.data.data)
             } catch (error) {

@@ -9,7 +9,7 @@ function RaftingFounder() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/raftingFounder");
+                const response = await axios.get("https://raftinglb.onrender.com/raftingFounder");
                 setRaftingFounder(response.data.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
