@@ -19,7 +19,7 @@ function AboutUs() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/AboutUsMain");
+                const response = await axios.get("https://raftinglb.onrender.com/AboutUsMain");
                 setAboutUsMAin(response.data.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -33,7 +33,7 @@ function AboutUs() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/AboutUsValue");
+                const response = await axios.get("https://raftinglb.onrender.com/AboutUsValue");
                 setAboutUsValue(response.data.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -47,7 +47,7 @@ function AboutUs() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/AboutUsTeam");
+                const response = await axios.get("https://raftinglb.onrender.com/AboutUsTeam");
                 setAboutUsTeam(response.data.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -61,7 +61,7 @@ function AboutUs() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/AboutUsMission");
+                const response = await axios.get("https://raftinglb.onrender.com/AboutUsMission");
                 setAboutUsMission(response.data.data);
             } catch (error) {
                 console.log("Error fetching data:", error);

@@ -8,7 +8,7 @@ function Features() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/features");
+                const response = await axios.get("https://raftinglb.onrender.com/features");
                 setFeatures(response.data.data);
                 console.log(response.data.data)
             } catch (error) {
