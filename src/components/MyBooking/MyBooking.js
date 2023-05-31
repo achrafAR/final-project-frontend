@@ -1,10 +1,54 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import MainComp from '../mainComponent/MainComp'
 import './myBooking.css'
-import Header from '../Header/Header'
 import Footer from '../Footer/Footer.jsx'
+import axios from 'axios'
+import { useParams, useNavigate } from 'react-router-dom'
 
 function MyBooking() {
+
+
+    const [myBooking, setMyBooking] = useState([])
+    const navigate = useNavigate();
+
+    const { userId } = useParams();
+
+
+
+
+    useEffect(() => {
+            const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+            if (!userInfo) {
+            navigate("/login");
+            }
+        if(userId){
+
+        const getMyBooking = async () => {
+            try {
+                console.log('hello')
+                const response = await axios.get(`http://localhost:5000/myBooking/${userId}`)
+                setMyBooking(response.data);
+                console.log(myBooking)
+            }
+            catch (err) {
+                console.log(err)
+            }
+        };
+        getMyBooking();
+        // navigate(`/booking/${userId}`);
+
+    }
+    }, [userId]);
+
+
+
+
+
+
+
+
+
+
     return (
         <div className='myBooking'>
             <div className='myBooking_mainComp'>
@@ -16,24 +60,29 @@ function MyBooking() {
             <div className="container_order">
                 <div className="left-side">
                     <div className="product-details">
-                            <div className="order-page_orderleft">
-                                    <div className="items">
+                        <div className="order-page_orderleft">
+                            {myBooking && myBooking.map((myBooking, index) => {
+                                return myBooking.offers.map ((offer, offerIndex) => (
+                                    <div className="items" key={index}>
                                         <p className="order-page__product-name">
-                                            Rafting
+                                            {offer.offerName}
                                         </p>
                                         <p className="order-page__product-price">
-                                            People:10
+                                            People:{offer.quantity}
                                         </p>
                                         <p className="order-page__product-price">
-                                            Price:10
+                                            Price:{offer.price}
                                         </p>
                                         <p className="order-page__product-price">
-                                            Total Price:40
+                                            Total Price:{offer.total_price}
                                         </p>
                                         <button>Remove</button>
 
                                     </div>
-                            </div>
+                                ))
+                            })}
+
+                        </div>
                     </div>
                 </div>
 
@@ -47,7 +96,7 @@ function MyBooking() {
                                 <input
                                     type="text"
                                     placeholder="Enter phone number"
-                                    
+
                                     className="form-control"
                                 />
                             </div>
@@ -78,13 +127,13 @@ function MyBooking() {
                             >
                                 Cancel Order
                             </button>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            <Footer />
                         </div>
-                        )
+                    </div>
+                </div>
+            </div>
+            <Footer />
+        </div>
+    )
 }
 
-                        export default MyBooking
+export default MyBooking

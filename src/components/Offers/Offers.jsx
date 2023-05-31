@@ -14,6 +14,20 @@ import axios from "axios";
 
 
 function Offers() {
+
+
+    const navigateToBooking = () => {
+        const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        console.log(userInfo)
+        if (userInfo && userInfo._id) {
+            const userId = userInfo._id;
+            console.log(userId)
+            navigate(`/booking/${userId}`);
+        } else {
+            navigate("/login");
+        }
+    };
+
     const [showReviewPage, setShowReviewPage] = useState(false);
     const [reviews, setReviews] = useState([])
     const navigate = useNavigate()
@@ -77,6 +91,8 @@ function Offers() {
         navigate(`/offerIndividual/${id}`)
     }
 
+
+
     const [offersMain, setOffersMain] = useState([])
 
     useEffect(() => {
@@ -95,9 +111,9 @@ function Offers() {
     return (
         <div className="offers">
             {offersMain.length > 0 && (
-                    <MainComp title={offersMain[0].title} text={offersMain[0].description} backgroundName={offersMain[0].backgroundName} />
+                <MainComp title={offersMain[0].title} text={offersMain[0].description} backgroundName={offersMain[0].backgroundName} />
 
-                )
+            )
             }
 
             <div className="offers_hero_title"><h5>
@@ -130,36 +146,42 @@ function Offers() {
                     )))
                 }
             </div>
-            
 
+            <div className="offers_mybooking">
+                <div className="offers_mybooking_title">
+                    <button onClick={
+                        navigateToBooking
+                    }>My Bookings</button>
+                </div>
+            </div>
 
 
             <div className="review_Container">
-                    <div className="reviews">
+                <div className="reviews">
 
-                        {firstThreeReviews && firstThreeReviews.map((review, index) => {
-                            const isExpanded = expandedReviews.includes(index);
-                            const truncatedDescription = truncateDescription(review.description);
-                            return (
-                                <div className="review_card" key={index}>
-                                    <div className="name_details">
-                                        <div className="review-card-avatar">
-                                            <div className="avatar-circle">{review.name.charAt(0).toLocaleUpperCase()}</div>
-                                        </div>
-                                        <div className="review_card_name">
-                                            <h5>{review.name}</h5>
-                                        </div>
+                    {firstThreeReviews && firstThreeReviews.map((review, index) => {
+                        const isExpanded = expandedReviews.includes(index);
+                        const truncatedDescription = truncateDescription(review.description);
+                        return (
+                            <div className="review_card" key={index}>
+                                <div className="name_details">
+                                    <div className="review-card-avatar">
+                                        <div className="avatar-circle">{review.name.charAt(0).toLocaleUpperCase()}</div>
                                     </div>
-
-                                    <div className="review_card_description">
-                                        <p className={isExpanded ? "expanded" : ""}
-                                            onClick={() => toggleReviewExpand(index)}>
-                                            {isExpanded ? review.description : truncatedDescription}
-                                        </p>
+                                    <div className="review_card_name">
+                                        <h5>{review.name}</h5>
                                     </div>
                                 </div>
-                            );
-                        })}
+
+                                <div className="review_card_description">
+                                    <p className={isExpanded ? "expanded" : ""}
+                                        onClick={() => toggleReviewExpand(index)}>
+                                        {isExpanded ? review.description : truncatedDescription}
+                                    </p>
+                                </div>
+                            </div>
+                        );
+                    })}
 
 
                 </div>

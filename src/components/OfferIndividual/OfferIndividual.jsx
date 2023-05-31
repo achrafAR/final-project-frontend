@@ -4,12 +4,12 @@ import MainComp from "../mainComponent/MainComp";
 import Footer from "../Footer/Footer";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import "./OfferIndividual.css";
-import { startTransition } from "react";
+// import { startTransition } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import { forwardRef } from "react";
+// import { forwardRef } from "react";
 
 function OfferIndividual() {
   const colors = {
@@ -162,8 +162,73 @@ function OfferIndividual() {
 
 // const userId = localStorage.getItem("userId"); // Retrieve the userId from localStorage
 
+///create cart 
+const handleSetQuantity = (e) => {
+  setQuantity(e.target.value)
+}
 
-  
+const addToCart = (event) => {
+  event.preventDefault(); 
+
+  console.log(userId)
+  console.log(id)
+
+  const data = {
+    userId: userId, 
+    offers: [
+      {
+        offerId: id, // Replace with actual offer ID
+        offerName: offerIndividual.title,
+        quantity: quantity,
+        price: offerIndividual.price,
+      },
+    ],
+  };
+
+  const config = {
+    headers: { "content-type": "application/json" },
+  };
+
+  // Make a POST request to your API endpoint with the data
+  // You can use libraries like axios or fetch for making the request
+
+  // Example using axios:
+  axios.post('http://localhost:5000/myBooking', data, config)
+    .then((response) => {
+      // Handle successful response
+      console.log('Item added to cart:', response.data);
+    })
+    .catch((error) => {
+      // Handle error
+      console.error('Error adding item to cart:', error);
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className="offerIndividual_hero">
@@ -193,10 +258,12 @@ function OfferIndividual() {
               </button>
               <input
                 type="text"
+                name='quantity'
                 className = "quantity-field"
                 value={quantity}
                 min="1"
                 max={10}
+                onChange={handleSetQuantity}
               />
               <button class="increment-btn" onClick={incrementQuantity}>
                 +
@@ -208,8 +275,11 @@ function OfferIndividual() {
             <h5>${totalPrice}</h5>
           </div>
           <div className="offerIndividual_content_details_button">
-            <button className="add_to_kart">Add To Kart</button>
-            <Link className="book_now" to='/booking'>My Booking</Link>
+            <button 
+            className="add_to_kart"
+            onClick={addToCart}
+            >Add To Kart</button>
+            <Link className="book_now" to={`/booking/${userId}`}>My Booking</Link>
           </div>
         </div>
 

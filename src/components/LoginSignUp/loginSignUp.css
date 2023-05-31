@@ -180,3 +180,18 @@
     border-bottom-right-radius: 5px;
 }
 
+
+@media only screen and (max-width:420px){
+    .login_signUp{
+        width: 90%;
+    }
+
+    .login_signUp_singUp{
+        width: 90%;
+    }
+    
+    .login_signUp_button_button{
+        font-size: 14px;
+    }
+}
+

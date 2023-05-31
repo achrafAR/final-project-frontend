@@ -100,7 +100,7 @@ function LoginForm({ toggleForm, activeButton }) {
               </div>
               <div className="login_signUp_button_form_form_input">
                 <input
-                  type="text"
+                  type="password"
                   id="password"
                   name="password"
                   placeholder="Password *"
