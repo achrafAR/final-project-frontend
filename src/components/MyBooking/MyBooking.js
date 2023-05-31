@@ -17,28 +17,76 @@ function MyBooking() {
 
 
     useEffect(() => {
-            const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-            if (!userInfo) {
+        const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        if (!userInfo) {
             navigate("/login");
-            }
-        if(userId){
+        }
+        if (userId) {
 
-        const getMyBooking = async () => {
-            try {
-                console.log('hello')
-                const response = await axios.get(`http://localhost:5000/myBooking/${userId}`)
-                setMyBooking(response.data);
-                console.log(myBooking)
-            }
-            catch (err) {
-                console.log(err)
-            }
-        };
-        getMyBooking();
-        // navigate(`/booking/${userId}`);
+            const getMyBooking = async () => {
+                try {
+                    const response = await axios.get(`http://localhost:5000/myBooking/${userId}`)
+                    setMyBooking(response.data);
+                }
+                catch (err) {
+                    console.log(err)
+                }
+            };
+            getMyBooking();
+            // navigate(`/booking/${userId}`);
 
-    }
+        }
     }, [userId]);
+
+
+    const [newOrder, setNewOrder] = useState({
+        name: '',
+        phoneNumber: '',
+        date: '',
+
+    })
+
+
+    const handleConfirmOrder = async () => {
+        if (!newOrder.name || !newOrder.phoneNumber || !newOrder.date) {
+            const confirmation = window.confirm('please Fill in all the fields')
+            if (!confirmation) {
+                return;
+            }
+        }
+
+        const order = {
+            userId,
+            totalAmount:myBooking[0].finalPrice,
+            name: newOrder.name,
+            phoneNumber: newOrder.phoneNumber,
+            date: newOrder.date,
+            offers: myBooking.flatMap((booking) =>
+                booking.offers.map((offer) => ({
+                    offerName: offer.offerName,
+                    quantity: offer.quantity,
+                    total_price: offer.total_price
+                }))
+            )
+        };
+
+        const config = {
+            headers: { "content-type": "application/json" },
+        };
+        console.log(order)
+        try{
+            const response = await axios.post('http://localhost:5000/orders', order, config);
+            console.log('Order created:', response.data);
+
+            await axios.delete(`http://localhost:5000/myBooking/user/${userId}`);
+            console.log('Cart deleted');
+
+            window.alert('order created successfully')
+
+        }catch (error){
+            console.log('Error creating order:',error)
+        }
+    }
 
 
 
@@ -61,8 +109,8 @@ function MyBooking() {
                 <div className="left-side">
                     <div className="product-details">
                         <div className="order-page_orderleft">
-                            {myBooking && myBooking.map((myBooking, index) => {
-                                return myBooking.offers.map ((offer, offerIndex) => (
+                            {Array.isArray(myBooking) && myBooking.map((myBooking, index) => {
+                                return myBooking.offers.map((offer, offerIndex) => (
                                     <div className="items" key={index}>
                                         <p className="order-page__product-name">
                                             {offer.offerName}
@@ -92,21 +140,36 @@ function MyBooking() {
                         <hr className="line-right" />
                         <div className="form-group">
                             <div className="phn">
-                                <label className="radio">Phone number :</label>{' '}
+                                <label className="radio">Full Name :</label>{' '}
                                 <input
                                     type="text"
-                                    placeholder="Enter phone number"
-
+                                    placeholder="Enter Your Name"
+                                    name='name'
                                     className="form-control"
+                                    onChange={(e) => setNewOrder({ ...newOrder, name: e.target.value })}
+
+                                />
+                            </div>
+                            <div className="adrs">
+                                <label className="radio">Phone Number :</label>{' '}
+                                <input
+                                    type="text"
+                                    placeholder="Phone Number"
+                                    name='phoneNumber'
+                                    className="form-control"
+                                    onChange={(e) => setNewOrder({ ...newOrder, phoneNumber: e.target.value })}
+
                                 />
                             </div>
                             <div className="adrs">
                                 <label className="radio">Date :</label>{' '}
                                 <input
                                     type="date"
-                                    placeholder="Enter shipping address"
-
+                                    placeholder="Enter Date "
+                                    name='date'
                                     className="form-control"
+                                    onChange={(e) => setNewOrder({ ...newOrder, date: e.target.value })}
+
                                 />
                             </div>
                         </div>
@@ -119,7 +182,11 @@ function MyBooking() {
                         </div>
                         <hr className="line" />
                         <div className="btn_dev">
-                            <button className="confirm-button">
+                            <button
+                                className="confirm-button"
+                                onClick={handleConfirmOrder}
+                            >
+
                                 Confirm Order
                             </button>
                             <button

@@ -8,7 +8,7 @@
 }
 
 .offerIndividual_content img {
-  width: 500px;
+  width: 580px;
   height: 50vh;
 }
 
@@ -216,4 +216,68 @@ input:focus {
 
 .your_own_review_rating span:focus {
   background-color: #1e8c7e;
+}
+
+
+
+
+@media only screen and (max-width:420px){
+
+.offerIndividual_content_details_button{
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+}
+
+
+
+
+.offerIndividual_content_details_button button{
+  width: 70%;
+}
+
+.offerIndividual_content_details_button a{
+  width: 65%;
+}
+
+
+  .offerIndividual_content{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .offerIndividual_content_image img{
+    width: 380px;
+  }
+
+  .offerIndividual_content_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .offerIndividual_content_details{
+    margin-top: 40px;
+    display: flex;
+    width: 380px;
+  }
+
+  .your_own_review{
+    width: 380px;
+  }
+  .your_own_review_text_form input{
+    width: 380px;
+  }
+  .your_own_review_rating{
+    width: 200px;
+  }
+
+
+
+
+
+
+
 }

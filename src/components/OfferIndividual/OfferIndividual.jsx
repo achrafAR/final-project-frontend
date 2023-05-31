@@ -197,6 +197,7 @@ const addToCart = (event) => {
     .then((response) => {
       // Handle successful response
       console.log('Item added to cart:', response.data);
+      window.alert('Added To Cart')
     })
     .catch((error) => {
       // Handle error
@@ -207,7 +208,20 @@ const addToCart = (event) => {
 
 
 
+const [amenities, setAmenities] = useState([]);
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("http://localhost:5000/amenities");
+                setAmenities(response.data.data);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
 
 
@@ -287,7 +301,17 @@ const addToCart = (event) => {
 
 
 
-
+      <div className="amenities">
+                {amenities && amenities.map((amenities,index) => {
+                    return(
+                        <div className="amenities_details">
+                    <img src={amenities.icon} alt ='icon'/>
+                    <p>{amenities.title}</p>
+                </div>
+                    )
+                })}
+                
+            </div>
 
 
 

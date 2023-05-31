@@ -302,4 +302,12 @@
     display: flex;
     gap: 10px;
 }
+
+.footer_footer_link ul {
+    display: flex;
+    align-items: center;
+}
+
+
+
 }
