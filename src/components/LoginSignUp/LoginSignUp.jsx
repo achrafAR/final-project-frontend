@@ -44,6 +44,7 @@ function LoginForm({ toggleForm, activeButton }) {
       });
       localStorage.setItem("userInfo", JSON.stringify(response.data));
       navigate("/"); // Redirect to the homePage after successful login
+
     } catch (error) {
       console.error(error);
     }

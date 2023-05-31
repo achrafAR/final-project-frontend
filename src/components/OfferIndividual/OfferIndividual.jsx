@@ -100,6 +100,9 @@ function OfferIndividual() {
         setReview([...review, response.data]);
         window.alert("review created successfully!");
 
+      document.querySelector('input[name="name"]').value = "";
+      document.querySelector('input[name="description"]').value = "";
+      setAddReview({ name: "", description: "", userId: userId });
       })
       .catch((error) => {
         console.log(error.response.data);

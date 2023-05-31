@@ -80,8 +80,22 @@ function MyBooking() {
 
             await axios.delete(`http://localhost:5000/myBooking/user/${userId}`);
             console.log('Cart deleted');
-
             window.alert('order created successfully')
+
+            document.querySelector('input[name="name"]').value = "";
+            document.querySelector('input[name="phoneNumber"]').value = "";
+            document.querySelector('input[name="date"]').value = "";
+            setNewOrder({ name: "", phoneNumber: "", date: "" });
+
+
+
+
+
+
+
+
+
+            
 
         }catch (error){
             console.log('Error creating order:',error)
