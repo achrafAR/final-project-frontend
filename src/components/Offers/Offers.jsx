@@ -35,7 +35,7 @@ function Offers() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/review");
+                const response = await axios.get("http://raftinglb.onrender.com/review");
                 setReviews(response.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -54,7 +54,7 @@ function Offers() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/offers");
+                const response = await axios.get("https://raftinglb.onrender.com/offers");
                 setOffers(response.data.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -68,7 +68,7 @@ function Offers() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/amenities");
+                const response = await axios.get("https://raftinglb.onrender.com/amenities");
                 setAmenities(response.data.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -113,7 +113,7 @@ function Offers() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/offersMain");
+                const response = await axios.get("https://raftinglb.onrender.com/offersMain");
                 setOffersMain(response.data.data);
             } catch (error) {
                 console.log("Error fetching data:", error);

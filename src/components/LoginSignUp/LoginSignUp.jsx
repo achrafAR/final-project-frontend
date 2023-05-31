@@ -39,7 +39,7 @@ function LoginForm({ toggleForm, activeButton }) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://raftinglb.onrender.com//user/login",
+        "https://raftinglb.onrender.com/user/login",
         {
           email,
           password,

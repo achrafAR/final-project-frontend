@@ -15,7 +15,7 @@ function Header() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/pages");
+        const response = await axios.get("https://raftinglb.onrender.com/pages");
         setNavbar(response.data.data);
       } catch (error) {
         console.log("Error fetching data:", error);
@@ -150,7 +150,7 @@ function Popup({ onClosePopup }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/pages");
+        const response = await axios.get("https://raftinglb.onrender.com/pages");
         setNavbar(response.data.data);
       } catch (error) {
         console.log("Error fetching data:", error);

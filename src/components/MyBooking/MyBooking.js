@@ -20,7 +20,7 @@ function MyBooking() {
       const getMyBooking = async () => {
         try {
           const response = await axios.get(
-            `https://raftinglb.onrender.com//myBooking/${userId}`
+            `https://raftinglb.onrender.com/myBooking/${userId}`
           );
           setMyBooking(response.data);
         } catch (err) {
@@ -67,14 +67,14 @@ function MyBooking() {
     console.log(order);
     try {
       const response = await axios.post(
-        "https://raftinglb.onrender.com//orders",
+        "https://raftinglb.onrender.com/orders",
         order,
         config
       );
       console.log("Order created:", response.data);
 
       await axios.delete(
-        `https://raftinglb.onrender.com//myBooking/user/${userId}`
+        `https://raftinglb.onrender.com/myBooking/user/${userId}`
       );
       console.log("Cart deleted");
       window.alert("order created successfully");

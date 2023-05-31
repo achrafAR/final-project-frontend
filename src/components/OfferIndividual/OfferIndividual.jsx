@@ -33,7 +33,7 @@ function OfferIndividual() {
       try {
         console.log(id);
         const response = await axios.get(
-          `https://raftinglb.onrender.com//offers/${id}`
+          `https://raftinglb.onrender.com/offers/${id}`
         );
         setOfferIndividual(response.data.data);
         setTotalRating(response.data.data.totalRating);
@@ -87,7 +87,7 @@ function OfferIndividual() {
     console.log(data);
 
     axios
-      .post("https://raftinglb.onrender.com//review", data, config)
+      .post("https://raftinglb.onrender.com/review", data, config)
       .then((response) => {
         setReview([...review, response.data]);
         window.alert("review created successfully!");
@@ -108,7 +108,7 @@ function OfferIndividual() {
       const updatedTotalRating = totalRating + value;
       const updatedTotalClick = totalClick + 1;
 
-      await axios.put(`https://raftinglb.onrender.com//offers/${id}`, {
+      await axios.put(`https://raftinglb.onrender.com/offers/${id}`, {
         totalRating: updatedTotalRating,
         totalClick: updatedTotalClick,
       });
@@ -181,7 +181,7 @@ function OfferIndividual() {
 
     // Example using axios:
     axios
-      .post("https://raftinglb.onrender.com//myBooking", data, config)
+      .post("https://raftinglb.onrender.com/myBooking", data, config)
       .then((response) => {
         // Handle successful response
         console.log("Item added to cart:", response.data);
@@ -199,7 +199,7 @@ function OfferIndividual() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://raftinglb.onrender.com//amenities"
+          "https://raftinglb.onrender.com/amenities"
         );
         setAmenities(response.data.data);
       } catch (error) {
