@@ -46,7 +46,6 @@
 .title {
     color: white;
     width: 250px;
-    margin-bottom: 10px;
     font-size: 30px;
     font-family: "Playfair Display", Sans-Serif;
 }
@@ -66,7 +65,10 @@
     position: absolute;
     top: 60%;
     left: 70px;
+    width:300px;
 }
+
+
 
 .will-flow button:hover {
     background-color: #25AD99;
