@@ -15,7 +15,7 @@ function HomePage() {
         <div>
             <HomeUi />
             <Popular />
-            <ActivityDescription />
+            {/* <ActivityDescription /> */}
             <Welcome />
             <AssiRiver />
             <RaftingFounder />
