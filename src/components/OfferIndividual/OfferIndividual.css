@@ -248,7 +248,7 @@ input:focus {
     }
   
     .offerIndividual_content_image img{
-      width: 440px;
+      width: 410px;
     }
   
     .offerIndividual_content_image {
@@ -260,11 +260,11 @@ input:focus {
     .offerIndividual_content_details{
       margin-top: 40px;
       display: flex;
-      width: 440px;
+      width: 400px;
     }
   
     .your_own_review{
-      width: 440px;
+      width: 410px;
     }
     .your_own_review_text_form input{
       width: 380px;

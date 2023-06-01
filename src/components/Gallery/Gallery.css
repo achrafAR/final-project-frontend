@@ -199,10 +199,16 @@
 
 @media only screen and (max-width:480px) {
   .container_slider{
-    zoom: 0.6;
+    zoom: 0.39;
     margin-top: 100px;
     
     
+  }
+
+  .container_slider h1 {
+    font-size: 70px;
+    font-family: "Playfair Display", Sans-Serif;
+    text-align: center;
   }
   
 
@@ -223,6 +229,12 @@
     margin-top: 100px;
     
     
+  }
+
+  .container_slider h1 {
+    font-size: 70px;
+    font-family: "Playfair Display", Sans-Serif;
+    text-align: center;
   }
   
 

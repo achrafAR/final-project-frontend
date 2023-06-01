@@ -1,7 +1,7 @@
 import React from 'react'
 import HomeUi from "../components/homePage/HomeUi/homeUi.jsx";
 import Popular from "../components/homePage/Popular/Popular.jsx";
-// import ActivityDescription from "../components/homePage/ActivityDescription/activityDescription";
+import ActivityDescription from "../components/homePage/ActivityDescription/activityDescription";
 import AssiRiver from '../components/homePage/AsiRiver/asiRiver.jsx'
 import Welcome from '../components/homePage/Welcome/Welcome.jsx'
 import RaftingFounder from "../components/homePage/RaftingFounder/raftingFounder.jsx";
@@ -15,7 +15,7 @@ function HomePage() {
         <div>
             <HomeUi />
             <Popular />
-            {/* <ActivityDescription /> */}
+            <ActivityDescription />
             <Welcome />
             <AssiRiver />
             <RaftingFounder />

@@ -108,6 +108,7 @@
         width: 90%;
         display: flex;
         flex-direction: column;
+        margin-bottom: 30px;
     }
 
     .video_description_information_title h2{
@@ -139,7 +140,7 @@
     
 
     .video_description_video iframe{
-        width: 440px;
+        width: 400px;
         
     }
 
