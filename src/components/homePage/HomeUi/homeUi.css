@@ -1,5 +1,5 @@
 .hero {
-  height: 100ddvh;
+  height: 100dvh;
   /* background: url(../../../images/background.jpeg); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 100px;
 }
 
 .title_description {

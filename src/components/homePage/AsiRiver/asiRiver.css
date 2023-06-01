@@ -10,7 +10,6 @@
 
 .template_background {
     background: url(../../../icons/template.svg),#f8f9fb;
-    margin-top: 120px;
     display: flex;
 
 }
@@ -66,7 +65,6 @@
     width: 60%;
     gap: 20px;
     height: 63vh;
-    margin-bottom: 80px;
 }
 
 .assi_river_title_description {
