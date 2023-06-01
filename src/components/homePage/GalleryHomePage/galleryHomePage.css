@@ -120,6 +120,10 @@
         flex-direction: column;
     }
 
+    .image_container img{
+        height: 45dvh;
+    }
+
     
 
     

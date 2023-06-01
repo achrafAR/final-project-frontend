@@ -317,7 +317,7 @@
 
 @media only screen and (max-width:420px){
     .left-side{
-        width: 130%;
+        width: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -338,6 +338,9 @@
         color: #1e8c7e;
     }
 
+    .mainComp_title{
+        width: 90%;
+    }
 
 }
 

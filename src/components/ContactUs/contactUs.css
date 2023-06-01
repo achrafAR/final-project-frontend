@@ -167,10 +167,9 @@ input:focus{
 
     }
 
-
-
-
-
+    .mainComp_title_description p{
+        width: 100%;
+    }
 
     .contactUs_container_map_form {
         display: flex;
@@ -189,13 +188,13 @@ input:focus{
     }
 
     .contactUs_container_map_form iframe{
-        width: 380px;
+        width: 350px;
         height: 500px;
 
     }
 
     .contactUs_container_map_form form{
-        width: 380px;
+        width: 350px;
     }
 
     .contact_container_form  {

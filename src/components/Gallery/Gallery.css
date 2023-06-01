@@ -222,7 +222,7 @@
 
 @media only screen and (max-width: 420px) {
   .container_slider {
-    zoom: 0.5;
+    zoom: 0.45;
     margin-top: 100px;
   }
 

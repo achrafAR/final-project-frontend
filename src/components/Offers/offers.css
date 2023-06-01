@@ -298,9 +298,16 @@
     width: 90%;
   }
 
+
+
   .offers_hero_title h5{
     text-align: center;
     margin-top: 70px;
+    width: 80%;
+  }
+
+  .mainComp_title{
+    width: 100%;
   }
 
   

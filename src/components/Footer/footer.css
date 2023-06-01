@@ -4,6 +4,11 @@
     display: flex;
 }
 
+.footer_footer_link ul{
+    gap:10px;
+    
+}
+
 .footer_container_header_social{
     display: none;
 }
@@ -125,7 +130,6 @@
 
 .footer_footer_link li {
     list-style: none;
-    margin-bottom: 12px;
 }
 
 .footer_footer_link a:hover {
@@ -313,7 +317,6 @@
 
 @media only screen and (max-width:420px){
 
-    
 
 .footer_container{
     height: 100px;
@@ -351,7 +354,7 @@
 }
 
 .footer_and_link{
-    height: 170vh;
+    height: 155vh;
     
     
 }
