@@ -61,29 +61,6 @@ position: absolute;
 }
 
 
-@media only screen and (max-width:420px){
-
-
-
-    .review-card{
-        width: 100%;
-    }
-
-    .review-page-content{
-        width: 100%;
-    }
-
-    .review-page{
-        width: 100%;
-    }
-
-
-
-
-
-}
-
-
 @media only screen and (max-width:480px){
 
 
@@ -111,3 +88,29 @@ position: absolute;
 
 
 }
+
+
+@media only screen and (max-width:420px){
+
+
+
+    .review-card{
+        width: 100%;
+    }
+
+    .review-page-content{
+        width: 100%;
+    }
+
+    .review-page{
+        width: 100%;
+    }
+
+
+
+
+
+}
+
+
+

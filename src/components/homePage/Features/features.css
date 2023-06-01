@@ -39,6 +39,14 @@
 }
 
 
+@media only screen and (max-width:480px) {
+
+  .feature {
+  display: none;  }
+    
+  }
+
+
 @media only screen and (max-width:420px) {
 
 .feature {
@@ -46,10 +54,5 @@ display: none;  }
   
 }
 
-@media only screen and (max-width:480px) {
 
-  .feature {
-  display: none;  }
-    
-  }
 

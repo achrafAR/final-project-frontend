@@ -87,6 +87,83 @@
 }
 
 
+@media only screen and (max-width:480px) {
+
+    .template_background{
+            width: 100%;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+        }
+    
+    .assi_river_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+    
+    }
+    
+    .assi_river_title_description{
+        display: flex;
+    }
+    
+    .assi_river_image img{
+        width:200px;
+        height: 200px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .assi_river_images{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .assi_river_title_description{
+        margin: 0;
+        width:80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .assi_river_title{
+        height: 50px;
+    }
+    
+    .assi_river_title h5{
+        margin: 0;
+        font-size: 30px;
+    }
+    
+    .assi_river_description p{
+    
+        text-align: center;
+    }
+    
+    .assi_river_description{
+        word-break: break-all;
+    
+    }
+    
+    .assi_river_btn{
+        margin-top: 50px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    }
+
+
 
 @media only screen and (max-width:420px) {
 
@@ -165,78 +242,3 @@
 }
 
 
-@media only screen and (max-width:480px) {
-
-    .template_background{
-            width: 100%;
-            height: 110vh;
-            display: flex;
-            align-items: center;
-        }
-    
-    .assi_river_container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        height: 80vh;
-    
-    }
-    
-    .assi_river_title_description{
-        display: flex;
-    }
-    
-    .assi_river_image img{
-        width:200px;
-        height: 200px;
-        display: flex;
-        flex-wrap: nowrap;
-    }
-    
-    .assi_river_images{
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
-    .assi_river_title_description{
-        margin: 0;
-        width:80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .assi_river_title{
-        height: 50px;
-    }
-    
-    .assi_river_title h5{
-        margin: 0;
-        font-size: 30px;
-    }
-    
-    .assi_river_description p{
-    
-        text-align: center;
-    }
-    
-    .assi_river_description{
-        word-break: break-all;
-    
-    }
-    
-    .assi_river_btn{
-        margin-top: 50px;
-    }
-    
-    
-    
-    
-    
-    
-    
-    }

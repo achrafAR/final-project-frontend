@@ -65,18 +65,6 @@
 
 
 
-
-@media only screen and (max-width:420px) {
-
-.openingDate{
-
-    display: flex;
-    flex-direction: column;
-
-}
-}
-
-
 @media only screen and (max-width:480px) {
 
     .openingDate{
@@ -94,5 +82,19 @@
 
 
     }
+
+
+@media only screen and (max-width:420px) {
+
+.openingDate{
+
+    display: flex;
+    flex-direction: column;
+
+}
+}
+
+
+
 
 

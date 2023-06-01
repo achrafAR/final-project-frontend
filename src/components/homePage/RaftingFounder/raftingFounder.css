@@ -40,29 +40,6 @@
 
 
 
-
-    @media only screen and (max-width:420px) {
-
-        
-
-        .rafting_founder_container{
-            display: flex;
-            flex-direction: column;
-            gap:30px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .rafting_founder{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap:20px;
-        }
-
-}
-
 @media only screen and (max-width:480px) {
 
         
@@ -89,5 +66,30 @@
         justify-content: center;
         width: 100%;
     }
+
+}
+
+
+
+
+    @media only screen and (max-width:420px) {
+
+        
+
+        .rafting_founder_container{
+            display: flex;
+            flex-direction: column;
+            gap:30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rafting_founder{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap:20px;
+        }
 
 }
