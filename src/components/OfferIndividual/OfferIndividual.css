@@ -9,7 +9,7 @@
 
 .offerIndividual_content img {
   width: 580px;
-  height: 50vh;
+  height: 50dvh;
 }
 
 .offerIndividual_content_details {
@@ -39,11 +39,11 @@
   flex-direction: column;
 }
 
-.offerIndividual_content_details_button a{
+.offerIndividual_content_details_button a {
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  color:black
+  color: black;
 }
 
 .offerIndividual_content_details_title h5 {
@@ -199,7 +199,7 @@ input:focus {
 
 .your_own_review_container {
   background: url(../../icons/template.svg), #f8f9fb;
-  height: 60vh;
+  height: 60dvh;
   display: flex;
   align-items: center;
   margin-top: 120px;
@@ -218,97 +218,76 @@ input:focus {
   background-color: #1e8c7e;
 }
 
-
-
-@media only screen and (max-width:480px){
-
-  .offerIndividual_content_details_button{
+@media only screen and (max-width: 480px) {
+  .offerIndividual_content_details_button {
     display: flex;
     align-items: center;
     width: 100%;
-  
   }
-  
-  
-  
-  
-  .offerIndividual_content_details_button button{
+
+  .offerIndividual_content_details_button button {
     width: 70%;
   }
-  
-  .offerIndividual_content_details_button a{
+
+  .offerIndividual_content_details_button a {
     width: 65%;
   }
-  
-  
-    .offerIndividual_content{
-      display: flex;
-      width: 90%;
-      flex-direction: column;
-    }
-  
-    .offerIndividual_content_image img{
-      width: 410px;
-    }
-  
-    .offerIndividual_content_image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .offerIndividual_content_details{
-      margin-top: 40px;
-      display: flex;
-      width: 400px;
-    }
-  
-    .your_own_review{
-      width: 410px;
-    }
-    .your_own_review_text_form input{
-      width: 380px;
-    }
-    .your_own_review_rating{
-      width: 200px;
-    }
-  
-  
-  
-  
-  
-  
-  
-  }
 
-@media only screen and (max-width:420px){
-
-.offerIndividual_content_details_button{
-  display: flex;
-  align-items: center;
-  width: 100%;
-
-}
-
-
-
-
-.offerIndividual_content_details_button button{
-  width: 70%;
-}
-
-.offerIndividual_content_details_button a{
-  width: 65%;
-}
-
-
-  .offerIndividual_content{
+  .offerIndividual_content {
     display: flex;
     width: 90%;
     flex-direction: column;
   }
 
-  .offerIndividual_content_image img{
+  .offerIndividual_content_image img {
+    width: 410px;
+  }
+
+  .offerIndividual_content_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .offerIndividual_content_details {
+    margin-top: 40px;
+    display: flex;
+    width: 400px;
+  }
+
+  .your_own_review {
+    width: 410px;
+  }
+  .your_own_review_text_form input {
+    width: 380px;
+  }
+  .your_own_review_rating {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .offerIndividual_content_details_button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .offerIndividual_content_details_button button {
+    width: 70%;
+  }
+
+  .offerIndividual_content_details_button a {
+    width: 65%;
+  }
+
+  .offerIndividual_content {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .offerIndividual_content_image img {
     width: 380px;
   }
 
@@ -318,28 +297,19 @@ input:focus {
     justify-content: center;
   }
 
-  .offerIndividual_content_details{
+  .offerIndividual_content_details {
     margin-top: 40px;
     display: flex;
     width: 380px;
   }
 
-  .your_own_review{
+  .your_own_review {
     width: 380px;
   }
-  .your_own_review_text_form input{
+  .your_own_review_text_form input {
     width: 380px;
   }
-  .your_own_review_rating{
+  .your_own_review_rating {
     width: 200px;
   }
-
-
-
-
-
-
-
 }
-
-
