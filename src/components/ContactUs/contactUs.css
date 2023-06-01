@@ -6,6 +6,12 @@
     justify-content: space-between;
 }
 
+.contactUs_container{
+    display: flex;
+    flex-direction: column;
+    gap:10dvh;
+}
+
 
 .contactUs_container_map{
     width: 45%;
@@ -93,6 +99,11 @@ input:focus{
 
 
 @media only screen and (max-width:480px){
+
+    .contactUs_details_maindiv{
+        display: flex;
+        gap:3rem;
+    }
 
     .contactUs_details_maindiv{
         display: flex;

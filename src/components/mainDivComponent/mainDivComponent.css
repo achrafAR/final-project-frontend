@@ -16,8 +16,6 @@
     flex-direction: row;
     /* width: 70%; */
     margin: 0 auto;
-    margin-top: 120px;
-    margin-bottom: 120px;
 }
 
 .mainDivComponent_container_details{
@@ -63,6 +61,17 @@
     }
 
     
+
+    .mainDivComponent_container_details h5{
+        margin: 0;
+    }
+
+    .mainDivComponent_container_details{
+        display: flex;
+        gap:10px;
+    }
+
+    
     }
 
 
@@ -72,6 +81,7 @@
 .mainDivComponent_container{
     margin-bottom: 0;
 }
+
 
 
 

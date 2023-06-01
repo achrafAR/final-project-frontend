@@ -1,13 +1,18 @@
 .myBooking_title {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 40px;
 }
 
 .myBooking_title h5 {
+    margin: 0;
     font-size: 40px;
     font-family: "Playfair Display", Sans-Serif;
+}
+
+.myBooking{
+    display: flex;
+    flex-direction: column;
+    gap:10dvh;
 }
 
 .container_order {
@@ -22,7 +27,6 @@
     max-height: fit-content;
     border-radius: 5px;
     border: 1px;
-
     padding: 2rem;
 }
 
@@ -47,7 +51,6 @@
 .items {
     display: flex;
     /* flex-wrap: wrap; */
-    margin-bottom: 1.5rem;
     background-color: #eeeeee8a;
     padding: 1rem;
     border-radius: 5px;
@@ -128,7 +131,6 @@
     font-size: 25px;
     font-weight: bold;
     color: black;
-    /* flex-basis: 60%; */
 }
 
 /*  */
@@ -206,6 +208,11 @@
     background: #1e8c7e;
     font-size: 1.1rem;
     color: white;
+}
+
+.order-page_orderleft{
+    display: flex;
+    gap:2rem;
 }
 
 .cancel-button:hover {

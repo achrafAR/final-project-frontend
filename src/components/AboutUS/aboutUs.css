@@ -17,13 +17,17 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.aboutUs{
+    display: flex;
+    flex-direction: column;
+    gap:10dvh;
+}
+
 .team_container{
     display: flex;
     width: 70%;
     margin: 0 auto;
     justify-content: space-between;
-    gap:10px;
-    margin-top: 20px;
 }
 
 .team_title h5{
@@ -31,6 +35,12 @@
     font-size: 40px;
     font-family: 'Playfair Display', Sans-Serif;
 
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    gap:3dvh;
 }
 
 .team_details_details{
@@ -57,20 +67,20 @@
 
 
 .team_details img{
-    width: 297px;
+    width: 300px;
     height: 395px;
     border-radius: 5px;
 }
 
-.team{
-    margin-top: 120px;
-    
+.team_details{
+    width: 24%;
 }
+
+
 
 .mission_and_vision{
     display: flex;
     align-items: center;
-    margin-top: 120px;
     width: 100%;
     height: 600px;
     background: url(../../icons/template.svg),#f8f9fb;
@@ -131,7 +141,9 @@
 .our_partner{
     width: 70%;
     margin: 0 auto;
-    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap:3dvh;
 }
 .our_partner_title p{
     width: 50%;
@@ -163,12 +175,17 @@
 .our_partner_icon{
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
 }
 
 
 
 @media only screen and (max-width:480px){
+
+
+    .mainDivComponents_aboutUs{
+        display: flex;
+        gap:3rem;
+    }
 
     .mainDivComponents_aboutUs{
         display: flex;
@@ -181,6 +198,7 @@
     .team{
         display: flex;
         flex-direction: column;
+        gap:30px;
     }
 
     .static_title{
@@ -189,17 +207,28 @@
     }
 
     .team_container{
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
     }
 
     .team_details_details h5{
             margin: 0;
+            text-align: center;
+            width: 15rem;
     }
 
     .team_details_details{
         gap:10px;
+        width: 100%;
+    }
+
+    .team_details_details p{
+        width: 15rem;
+        text-align: center;
     }
 
 

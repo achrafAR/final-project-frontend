@@ -31,7 +31,7 @@ function activityDescription() {
         }
     ]
     return (
-        <>
+        <div className='activity_description_container'>
             <div className='static_title'><h5>AND MORE</h5></div>
             <div className='template_backgroung_activity_description'>
                 <div className='activity_description_container'>
@@ -59,7 +59,7 @@ function activityDescription() {
 
                 </div>
             </div>
-        </>
+        </div>
 
 
     );

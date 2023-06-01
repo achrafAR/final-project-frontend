@@ -16,6 +16,12 @@
   }
 }
 
+.gallery{
+  display: flex;
+  flex-direction: column;
+  gap:8dvh;
+}
+
 .heading h1 {
   font-size: 40px;
   font-family: "Playfair Display", Sans-Serif;
@@ -198,8 +204,7 @@
 
 @media only screen and (max-width: 480px) {
   .container_slider {
-    zoom: 0.39;
-    margin-top: 100px;
+    zoom: 0.52;
   }
 
   .container_slider h1 {
@@ -208,9 +213,7 @@
     text-align: center;
   }
 
-  .heading {
-    margin-bottom: 100px;
-  }
+
 
   .gallery_container {
     height: 100dvh;

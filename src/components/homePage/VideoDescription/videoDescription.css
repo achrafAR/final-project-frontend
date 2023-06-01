@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 65dvh;
+  height: 60dvh;
 }
 
 .video_description_container {
@@ -26,7 +26,6 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin-bottom: 50px;
 }
 
 .blogger {
@@ -72,9 +71,7 @@
   margin: 0;
 }
 
-.blogger {
-  margin-top: 15px;
-}
+
 
 .blogger_details {
   display: flex;
