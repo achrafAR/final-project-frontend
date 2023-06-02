@@ -66,6 +66,28 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+
+@media only screen and (max-width: 1280px) {
+
+  .hero {
+    height: 122dvh;
+  }
+  
+  .title_description h2{
+    width: 35rem;
+  }
+
+  .title_description p{
+    width: 35rem;
+  }
+
+  .title_description{
+    width: 90%;
+  }
+
+  
+}
+
 @media only screen and (max-width: 480px) {
   .hero {
     width: 100%;
@@ -108,22 +130,7 @@
 }
 
 
-@media only screen and (max-width: 1280px) {
 
-  .hero {
-    height: 122dvh;
-  }
-  
-  .title_description h2{
-    width: 35rem;
-  }
-
-  .title_description p{
-    width: 35rem;
-  }
-
-  
-}
 
 @media only screen and (max-width: 420px) {
   .hero {

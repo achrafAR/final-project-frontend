@@ -44,13 +44,16 @@
   .features_main {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    gap: 5rem;
     align-items: center;
+
 }
 
 .feature p{
   width: 100%;
+}
+
+.feature h2{
+  width: 5rem;
 }
 
 

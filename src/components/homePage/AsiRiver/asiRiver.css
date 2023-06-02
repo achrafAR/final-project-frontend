@@ -9,7 +9,7 @@
 }
 
 .template_background {
-    background: url(../../../icons/template.svg),#f8f9fb;
+    background: url(../../../icons/template.svg), #f8f9fb;
     display: flex;
 
 }
@@ -20,7 +20,7 @@
     cursor: pointer;
     margin: 10px 0;
     border-radius: 3px;
-    border: 1px solid #4F4F4F ;
+    border: 1px solid #4F4F4F;
     border-radius: 5px;
 }
 
@@ -35,16 +35,16 @@
 
 
 
-.assi_river_btn:hover{
+.assi_river_btn:hover {
     background-color: #1e8c7e;
 }
 
-.assi_river_title h5{
+.assi_river_title h5 {
     font-size: 40px;
     font-family: 'Playfair Display', Sans-Serif;
 }
 
-.assi_river_description p{
+.assi_river_description p {
     word-break: break-all;
     color: #4F4F4F;
     font-size: 16px;
@@ -52,7 +52,7 @@
 }
 
 
-.assi_river_title{
+.assi_river_title {
     height: 120px;
 }
 
@@ -86,193 +86,201 @@
 }
 
 
+
+
+
+@media only screen and (max-width:1280px) {
+    .assi_river_container {
+        width: 90%;
+    }
+
+    .assi_river_container img {
+        width: 290px;
+    }
+
+    .template_background {
+        height: 100dvh;
+    }
+}
+
+
+
+
 @media only screen and (max-width:480px) {
 
-    .template_background{
-            height: 110vh;
-            display: flex;
-            align-items: center;
-        }
-    
-    .assi_river_container{
+    .template_background {
+        height: 110vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .assi_river_container {
         width: 100%;
         display: flex;
         flex-direction: column;
         height: 80vh;
-        
-        
-    
+
+
+
     }
-    
-    .assi_river_title_description{
+
+    .assi_river_title_description {
         display: flex;
     }
-    
-    .assi_river_image img{
-        width:190px;
+
+    .assi_river_image img {
+        width: 190px;
         height: 190px;
         display: flex;
         flex-wrap: nowrap;
-        
+
     }
-    
-    .assi_river_images{
+
+    .assi_river_images {
         margin-right: 45px;
-        gap:10px;
+        gap: 10px;
         width: 80%;
         display: flex;
         flex-direction: column;
-        
-        
+
+
     }
-    
-    .assi_river_title_description{
+
+    .assi_river_title_description {
         margin: 0;
-        width:80%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
-    .assi_river_title{
+
+    .assi_river_title {
         height: 50px;
     }
-    
-    .assi_river_title h5{
+
+    .assi_river_title h5 {
         margin: 0;
         font-size: 30px;
     }
-    
-    .assi_river_description p{
-    
+
+    .assi_river_description p {
+
         text-align: center;
     }
-    
-    .assi_river_description{
+
+    .assi_river_description {
         word-break: break-all;
-    
+
     }
-    
-    .assi_river_btn{
+
+    .assi_river_btn {
         margin-top: 50px;
     }
-    
-    
-    
-    
-    
-    
-    
-    }
+
+
+
+
+
+
+
+}
 
 
 
 @media only screen and (max-width:420px) {
 
-.template_background{
+    .template_background {
         width: 100%;
         height: 100vh;
         display: flex;
         margin: 0;
     }
 
-    
-
-.assi_river_container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    gap:30px;
-
-}
-
-.assi_river_title_description{
-    display: flex;
-}
-
-.assi_river_image img{
-    width:175px;
-    height: 175px;
-
-}
-
-.assi_river_images{
-    width: 84%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.assi_river_title_description{
-    margin: 0;
-    width:80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.assi_river_title{
-    height: 50px;
-}
-
-.assi_river_title h5{
-    margin: 0;
-    font-size: 30px;
-}
-
-.assi_river_description p{
-
-    text-align: center;
-}
-
-.assi_river_description{
-    word-break: break-all;
-
-}
-
-.assi_river_btn{
-    margin-top: 70px;
-}
 
 
+    .assi_river_container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        gap: 30px;
 
-
-
-
-
-}
-
-@media only screen and (max-width:1280px) {
-    .assi_river_container{
-        width: 90%;
     }
 
-    .assi_river_container img{
-        width: 290px;
+    .assi_river_title_description {
+        display: flex;
     }
 
-    .template_background{
-        height: 100dvh;
+    .assi_river_image img {
+        width: 175px;
+        height: 175px;
+
+    }
+
+    .assi_river_images {
+        width: 84%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .assi_river_title_description {
+        margin: 0;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .assi_river_title {
+        height: 50px;
+    }
+
+    .assi_river_title h5 {
+        margin: 0;
+        font-size: 30px;
+    }
+
+    .assi_river_description p {
+
+        text-align: center;
+    }
+
+    .assi_river_description {
+        word-break: break-all;
+
+    }
+
+    .assi_river_btn {
+        margin-top: 70px;
+    }
+
+
+
+
+
+
+
+}
+
+
+@media only screen and (max-width:414px) {
+
+
+
+    .assi_river_container img {
+        width: 192px;
     }
 }
+
 
 
 @media only screen and (max-width:390px) {
 
 
 
-    .assi_river_container img{
+    .assi_river_container img {
         width: 180px;
-    }
-}
-
-@media only screen and (max-width:414px) {
-
-
-
-    .assi_river_container img{
-        width: 192px;
     }
 }
