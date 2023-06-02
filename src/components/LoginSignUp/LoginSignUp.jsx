@@ -125,6 +125,61 @@ function LoginForm({ toggleForm, activeButton }) {
 }
 
 function SignUpForm({ toggleForm, activeButton }) {
+
+  const [addUser, setAddUser] = useState({
+    userName: "",
+    email: "",
+    password: "",
+  });
+
+  const handleChange = async (event) => {
+    event.preventDefault();
+    const fieldName = event.target.getAttribute("name");
+    let fieldValue = event.target.value;
+
+    const newFormData = { ...addUser };
+    newFormData[fieldName] = fieldValue;
+
+    setAddUser(newFormData);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('hi9')
+    // const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    const data = {
+      userName: addUser.userName,
+      email: addUser.email,
+      password: addUser.password,
+    };
+
+    const config = {
+      headers: { "content-type": "application/json" },
+    };
+
+    console.log(data);
+
+    axios
+      .post("https://raftinglb.onrender.com/user", data, config)
+      .then((response) => {
+        setAddUser([...addUser, response.data]);
+        window.alert("review created successfully!");
+
+        document.querySelector('input[name="userName"]').value = "";
+        document.querySelector('input[name="email"]').value = "";
+        document.querySelector('input[name="password"]').value = "";
+
+        setAddUser({ userName: "", email: "", password: "" });
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+  };
+
+
+
+
+
   return (
     <div className="login_container">
       <div className="login_signUp_singUp">
@@ -150,13 +205,16 @@ function SignUpForm({ toggleForm, activeButton }) {
             <h5>Sign Up For Free</h5>
           </div>
           <div className="login_signUp_form_form">
-            <form className="login_signUp_button_form_form">
+            <form className="login_signUp_button_form_form" >
               <div className="login_signUp_button_form_form_input">
                 <input
                   type="text"
                   id="fullName"
-                  name="fullName"
+                  name="userName"
                   placeholder="Full Name *"
+                  onChange={handleChange}
+
+
                 ></input>
               </div>
               <div className="login_signUp_button_form_form_input">
@@ -165,21 +223,25 @@ function SignUpForm({ toggleForm, activeButton }) {
                   id="email"
                   name="email"
                   placeholder="Email *"
+                  onChange={handleChange}
+
                 ></input>
               </div>
               <div className="login_signUp_button_form_form_input">
                 <input
-                  type="text"
+                  type="password"
                   id="password"
                   name="password"
                   placeholder="Password *"
+                  onChange={handleChange}
+
                 ></input>
               </div>
             </form>
           </div>
         </div>
         <div className="login_signUp_button_login_getStarted">
-          <button className="login_signUp_button_login_button_getStarted">
+          <button className="login_signUp_button_login_button_getStarted" onSubmit={handleSubmit}>
             GET STARTED
           </button>
         </div>

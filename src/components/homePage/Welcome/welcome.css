@@ -6,6 +6,8 @@
 .welcome{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -14,7 +16,6 @@
     display: flex;
     width: 70%;
     margin: 0 auto;
-    justify-content: space-between;
     
 
 }
