@@ -205,7 +205,7 @@ function SignUpForm({ toggleForm, activeButton }) {
             <h5>Sign Up For Free</h5>
           </div>
           <div className="login_signUp_form_form">
-            <form className="login_signUp_button_form_form" >
+            <form className="login_signUp_button_form_form" onSubmit={handleSubmit}>
               <div className="login_signUp_button_form_form_input">
                 <input
                   type="text"
@@ -237,14 +237,15 @@ function SignUpForm({ toggleForm, activeButton }) {
 
                 ></input>
               </div>
-            </form>
-          </div>
-        </div>
-        <div className="login_signUp_button_login_getStarted">
-          <button className="login_signUp_button_login_button_getStarted" onSubmit={handleSubmit}>
+              <div className="login_signUp_button_login_getStarted">
+          <button className="login_signUp_button_login_button_getStarted" >
             GET STARTED
           </button>
         </div>
+            </form>
+          </div>
+        </div>
+        
       </div>
     </div>
   );

@@ -157,8 +157,6 @@ function OfferIndividual() {
   const addToCart = (event) => {
     event.preventDefault();
 
-    console.log(userId);
-    console.log(id);
 
     const data = {
       userId: userId,
