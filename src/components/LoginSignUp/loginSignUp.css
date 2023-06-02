@@ -130,11 +130,17 @@
     color: white;
 }
 
+.login_signUp_button_form_form_input input:focus{
+    color: #f9fcfb;
+}
+
+
 
 .login_signUp_button_form_form_input input {
     background-color: #0000001a;
     font-size: 20px;
     width: 92%;
+    color: #25AD99;
     padding: 20px 15px;
     border: 1px solid #448075;
     border-radius: 5px;
@@ -185,7 +191,11 @@
 
 
 
-
+@media only screen and (max-width:1280px){
+    .login_signUp{
+        width: 40%;
+    }
+}
 
 
 

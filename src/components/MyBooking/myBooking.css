@@ -213,6 +213,7 @@
 .order-page_orderleft{
     display: flex;
     gap:2rem;
+    flex-direction: column;
 }
 
 .cancel-button:hover {
@@ -227,6 +228,8 @@
     .order-page {
         margin-top: 20%;
     }
+
+    
 
     .order-page__title {
         font-size: 3rem;
@@ -315,6 +318,29 @@
 }
 
 
+@media only screen and (max-width: 1280px) {
+    
+    .container_order{
+        width: 90%;
+    }
+
+    .order-page_orderleft{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-side{
+        width: 50%;
+    }
+
+    .right-side{
+        width: 32%;
+    }
+
+
+}
+
+
 @media only screen and (max-width:420px){
     .left-side{
         width: 300px;
@@ -343,6 +369,9 @@
     }
 
 }
+
+
+
 
 @media only screen and (max-width:420px){
 
