@@ -78,6 +78,20 @@
     margin: 0 auto;
 }
 
+@media only screen and (max-width:1280px){
+    .activity_description_container{
+        width: 100%;
+    }
+
+    .template_backgroung_activity_description{
+        width: 90%;
+    }
+    .static_title{
+        width: 90%;
+        
+    }
+}
+
 
 @media only screen and (max-width:480px){
 

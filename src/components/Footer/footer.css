@@ -236,12 +236,26 @@
     .footer_footer{
         width: 90%;
     }
+/* 
+    .footer_and_link{
+        height: 80dvh;
+    } */
 }
 
 
 
 
 @media only screen and (max-width:480px){
+
+
+    .contact_info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_footer_column{
+        gap:1rem;
+    }
 
     
 
@@ -324,11 +338,14 @@
     
     
     
+    
     }
 
 
 
 @media only screen and (max-width:420px){
+
+    
 
 
 .footer_container{
@@ -367,7 +384,7 @@
 }
 
 .footer_and_link{
-    height: 160vh;
+    height: 170vh;
     
     
 }

@@ -286,6 +286,36 @@
 }
 
 
+@media only screen and (max-width:1280px){
+  .offers_hero_cards{
+    width: 90%;
+    gap:3rem;
+    
+
+
+  }
+
+  .offers_hero_card{
+    width: 31%;
+  }
+
+  .review_Container{
+    width: 90%;
+  }
+
+
+  .amenities{
+    width: 90%;
+  }
+
+  .offers_hero_card{
+    width:350px;
+  }
+
+  
+}
+
+
 
 @media only screen and (max-width:420px){
   .offers_hero_cards{
