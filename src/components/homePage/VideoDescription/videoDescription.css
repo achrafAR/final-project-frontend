@@ -143,10 +143,18 @@
   .video_description_information_title h2 {
     font-size: 30px;
     text-align: center;
+    margin: 0;
   }
+
+  .video_description_information{
+    gap: 20px;
+  }
+
+ 
 
   .video_description_information_description p {
     text-align: center;
+    margin: 0;
   }
 
   .video_description_information {

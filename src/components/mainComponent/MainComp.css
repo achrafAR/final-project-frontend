@@ -59,6 +59,7 @@
   height: 60vh;
   width: 70%;
   margin: 0 auto;
+  /* margin: 0; */
 }
 
 .mainComp_title_title h5 {
@@ -71,6 +72,7 @@
 }
 
 .mainComp_title_description p{
+  margin: 0;
   width:25rem ;
   text-align: center;
 }

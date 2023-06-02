@@ -320,15 +320,15 @@
 
 .footer_container{
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
 .footer_container_header{
+    margin: 0;
     width: 90%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .footer_container_header_nav{
@@ -354,7 +354,7 @@
 }
 
 .footer_and_link{
-    height: 155vh;
+    height: 160vh;
     
     
 }

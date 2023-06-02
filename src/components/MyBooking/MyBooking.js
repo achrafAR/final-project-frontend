@@ -172,7 +172,12 @@ function MyBooking() {
             </div>
             <hr className="line" />
             <div className="payment ">
-              <span>Payment 50% on OMT</span>
+              <span>Final Price: ${myBooking[0].finalPrice}</span>
+              </div>
+            <div className="payment ">
+              <span>
+                    Payment 50% on OMT
+              </span>
             </div>
             <div className="order-page__bill">
               {/* <p>Total: {calculateTotal()}&nbsp; $</p> */}

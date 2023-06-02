@@ -91,4 +91,18 @@
             gap:20px;
         }
 
+        .rafting_founder_title_description p{
+            margin: 0;
+        }
+
+        .rafting_founder_title_description h5{
+            margin: 0;
+        }
+
+        .rafting_founder_title_description{
+            gap:10px;
+        }
+
+
+
 }

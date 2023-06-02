@@ -118,6 +118,12 @@
   bottom: 2rem;
 }
 
+.container_slider{
+  display: flex;
+  gap:3rem;
+  flex-direction: column;
+}
+
 .arrow-back-outline {
   /* margin-bottom: 1rem; */
   /* font-size: 16px; */
@@ -211,6 +217,7 @@
     font-size: 70px;
     font-family: "Playfair Display", Sans-Serif;
     text-align: center;
+    margin: 0;
   }
 
 
@@ -231,6 +238,31 @@
     font-family: "Playfair Display", Sans-Serif;
     text-align: center;
   }
+
+  .gallery_home_page_title p{
+    margin: 0;
+  }
+
+  .gallery_home_page_title h2{
+    margin: 0;
+  }
+
+  .gallery_home_page_title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gallery_home_page_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+
+
+
 
   .heading {
     margin-bottom: 100px;
