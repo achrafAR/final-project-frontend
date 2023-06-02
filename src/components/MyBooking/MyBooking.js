@@ -171,9 +171,13 @@ function MyBooking() {
               </div>
             </div>
             <hr className="line" />
-            <div className="payment ">
-              <span>Final Price: ${myBooking[0].finalPrice}</span>
-              </div>
+            <div className="payment">
+  {myBooking.length > 0 && (
+    <span>Final Price: ${myBooking[0].finalPrice}</span>
+  )}
+</div>
+            
+            
             <div className="payment ">
               <span>
                     Payment 50% on OMT

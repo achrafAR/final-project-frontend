@@ -344,3 +344,24 @@
 
 }
 
+@media only screen and (max-width:420px){
+
+    .left-side{
+        width: 330px;
+    }
+
+}
+
+
+@media only screen and (max-width:414px){
+
+    .left-side{
+        width: 360px;
+    }
+
+    .right-side{
+        width: 300px;
+    }
+
+}
+

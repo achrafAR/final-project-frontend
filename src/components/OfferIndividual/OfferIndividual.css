@@ -320,3 +320,25 @@ input:focus {
     width: 200px;
   }
 }
+
+
+@media only screen and (max-width: 420px) {
+
+  .offerIndividual_content_image img {
+    width: 370px;
+    height: 300px;
+  }
+}
+
+
+@media only screen and (max-width: 414px) {
+
+  .offerIndividual_content_image img {
+    width: 390px;
+    height: 300px;
+  }
+
+  .offerIndividual_content_details {
+    width: 380px;
+  }
+}

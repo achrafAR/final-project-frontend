@@ -244,4 +244,35 @@
 
 }
 
+@media only screen and (max-width:1280px) {
+    .assi_river_container{
+        width: 90%;
+    }
 
+    .assi_river_container img{
+        width: 290px;
+    }
+
+    .template_background{
+        height: 100dvh;
+    }
+}
+
+
+@media only screen and (max-width:390px) {
+
+
+
+    .assi_river_container img{
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width:414px) {
+
+
+
+    .assi_river_container img{
+        width: 192px;
+    }
+}

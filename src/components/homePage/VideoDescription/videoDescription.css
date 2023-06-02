@@ -80,6 +80,20 @@
   margin-left: 15px;
 }
 
+
+@media only screen and (max-width: 1280px) {
+  .video_description_container{
+    height: 70dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .video_description{
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .video_description_container {
     width: 100%;
@@ -175,5 +189,12 @@
 
   .video_description_video iframe {
     width: 340px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+
+  .video_description_video iframe {
+    width: 390px;
   }
 }

@@ -39,6 +39,27 @@
   /* margin-bottom: 1rem; */
 }
 
+@media only screen and (max-width:1280px) {
+
+  .features_main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5rem;
+    align-items: center;
+}
+
+.feature p{
+  width: 100%;
+}
+
+
+      
+    }
+
+    
+  
+
 
 @media only screen and (max-width:480px) {
 

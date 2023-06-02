@@ -272,3 +272,19 @@
     height: 120dvh;
   }
 }
+
+
+@media only screen and (max-width: 420px) {
+  .container_slider {
+    zoom: 0.47;
+    margin-top: 100px;
+  }
+}
+
+
+@media only screen and (max-width: 414px) {
+  .container_slider {
+    zoom: 0.51;
+    margin-top: 100px;
+  }
+}

@@ -252,6 +252,27 @@
     
   }
 
+@media only screen and (max-width:1280px) {
+
+  .header__nav{
+    width: 35%;
+  }
+
+
+  .icon_login_explore{
+    width: 23%;
+  }
+
+  .header{
+    width: 90%;
+  }
+
+
+
+
+
+
+  }
 
 
 
