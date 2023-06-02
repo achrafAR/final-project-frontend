@@ -125,7 +125,7 @@ function LoginForm({ toggleForm, activeButton }) {
 }
 
 function SignUpForm({ toggleForm, activeButton }) {
-
+  const navigate = useNavigate();
   const [addUser, setAddUser] = useState({
     userName: "",
     email: "",
@@ -162,14 +162,10 @@ function SignUpForm({ toggleForm, activeButton }) {
     axios
       .post("https://raftinglb.onrender.com/user", data, config)
       .then((response) => {
-        setAddUser([...addUser, response.data]);
-        window.alert("review created successfully!");
+        localStorage.setItem("userInfo", JSON.stringify(response.data));
+        navigate("/"); // Redirect to the homePage after successful login
+        window.alert("user created successfully!");
 
-        document.querySelector('input[name="userName"]').value = "";
-        document.querySelector('input[name="email"]').value = "";
-        document.querySelector('input[name="password"]').value = "";
-
-        setAddUser({ userName: "", email: "", password: "" });
       })
       .catch((error) => {
         console.log(error.response.data);
