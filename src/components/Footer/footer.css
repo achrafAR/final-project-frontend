@@ -248,6 +248,7 @@
 @media only screen and (max-width:480px){
 
 
+
     .contact_info{
         display: flex;
         flex-direction: column;
@@ -295,7 +296,7 @@
     }
     
     .footer_and_link{
-        height: 170vh;
+        height: 190vh;
         
         
     }
@@ -344,8 +345,6 @@
 
 
 @media only screen and (max-width:420px){
-
-    
 
 
 .footer_container{
