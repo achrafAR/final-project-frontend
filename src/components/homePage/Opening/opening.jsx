@@ -32,6 +32,7 @@ function Opening() {
 
     const styleImage = {
         filter:'brightness(0.7)'
+
     }
 
 
