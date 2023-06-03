@@ -50,8 +50,8 @@
 
 .items {
     display: flex;
-    /* flex-wrap: wrap; */
-    background-color: #eeeeee8a;
+    background: url(../../icons/template.svg),#f8f9fb;
+    /* background-size: 1000px; */
     padding: 1rem;
     border-radius: 5px;
     -webkit-box-shadow: 1px 1px 4px -1px black;

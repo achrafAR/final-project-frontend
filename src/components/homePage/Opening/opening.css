@@ -6,6 +6,8 @@
 }
 
 .template_opening{
+    width: 100%;
+    background-size: 1000px;
     background: url(../../../icons/template.svg),#f8f9fb;
 
 }

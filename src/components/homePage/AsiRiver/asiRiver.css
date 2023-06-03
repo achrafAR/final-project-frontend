@@ -11,6 +11,8 @@
 .template_background {
     background: url(../../../icons/template.svg), #f8f9fb;
     display: flex;
+    background-size: 1000px;
+
 
 }
 

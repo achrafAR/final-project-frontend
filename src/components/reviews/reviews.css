@@ -11,7 +11,9 @@
     overflow: auto;
     padding-bottom: 10px;
     border-radius: 5px;
-    background: url(../../icons/template.svg),white;
+    background: url(../../icons/template.svg),#f8f9fb;
+    background-size: 1000px;
+
 
 
 }
@@ -88,6 +90,7 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #1e8c7e;
+    
 
 
 } 

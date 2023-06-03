@@ -205,6 +205,7 @@ input:focus {
 
 .your_own_review_container {
   background: url(../../icons/template.svg), #f8f9fb;
+  background-size: 1000px;
   height: 60dvh;
   display: flex;
   align-items: center;

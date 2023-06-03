@@ -75,6 +75,8 @@
   align-items: center;
   justify-content: center;
   height: 28rem;
+  background-size: 1000px;
+
   background: url(../../icons/template.svg), #f8f9fb;
 }
 
