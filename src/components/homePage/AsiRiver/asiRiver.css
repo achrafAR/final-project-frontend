@@ -42,21 +42,19 @@
 }
 
 .assi_river_title h5 {
+    margin: 0;
     font-size: 40px;
     font-family: 'Playfair Display', Sans-Serif;
 }
 
 .assi_river_description p {
+    margin: 0;
     word-break: break-all;
     color: #4F4F4F;
     font-size: 16px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-.assi_river_title {
-    height: 120px;
-}
 
 
 .assi_river_images {
@@ -74,9 +72,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60vh;
-    margin-left: 50px;
-    margin-bottom: 60px;
+    gap:3rem;
+
 }
 
 .assi_river_images img {
@@ -111,7 +108,7 @@
 @media only screen and (max-width:480px) {
 
     .template_background {
-        height: 110vh;
+        height: 100vh;
         display: flex;
         align-items: center;
     }
@@ -121,6 +118,8 @@
         display: flex;
         flex-direction: column;
         height: 80vh;
+        gap: 3rem;
+
 
 
 
@@ -154,30 +153,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 2rem;
     }
 
-    .assi_river_title {
-        height: 50px;
-    }
+    
 
-    .assi_river_title h5 {
-        margin: 0;
-        font-size: 30px;
-    }
+    
 
     .assi_river_description p {
 
         text-align: center;
     }
 
-    .assi_river_description {
-        word-break: break-all;
 
-    }
 
-    .assi_river_btn {
-        margin-top: 50px;
-    }
+    
 
 
 
@@ -205,7 +195,6 @@
         display: flex;
         flex-direction: column;
         height: 80vh;
-        gap: 30px;
 
     }
 
@@ -235,28 +224,13 @@
         align-items: center;
     }
 
-    .assi_river_title {
-        height: 50px;
-    }
-
-    .assi_river_title h5 {
-        margin: 0;
-        font-size: 30px;
-    }
 
     .assi_river_description p {
 
         text-align: center;
     }
 
-    .assi_river_description {
-        word-break: break-all;
 
-    }
-
-    .assi_river_btn {
-        margin-top: 70px;
-    }
 
 
 

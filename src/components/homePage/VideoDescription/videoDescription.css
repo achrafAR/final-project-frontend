@@ -161,7 +161,7 @@
     gap: 20px;
   }
 
- 
+
 
   .video_description_information_description p {
     text-align: center;
@@ -198,5 +198,12 @@
   .video_description_container{
     display: flex;
     align-items: center;
+  }
+}
+
+
+@media only screen and (max-width: 390px) {
+  .video_description_video iframe {
+    width: 370px;
   }
 }
