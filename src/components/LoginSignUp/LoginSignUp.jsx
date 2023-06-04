@@ -91,7 +91,8 @@ function LoginForm({ toggleForm, activeButton }) {
               className="login_signUp_button_form_form"
               onSubmit={handlerSubmit}
             >
-              <div className="login_signUp_button_form_form_input">
+                            <div className="login_form_and_button">
+                            <div className="login_signUp_button_form_form_input">
                 <input
                   type="text"
                   id="email"
@@ -111,6 +112,8 @@ function LoginForm({ toggleForm, activeButton }) {
                   onChange={(e) => setPassword(e.target.value)}
                 ></input>
               </div>
+</div>
+              
               <div className="login_signUp_button_login">
                 <button className="login_signUp_button_login_button">
                   LOG IN
@@ -196,12 +199,13 @@ function SignUpForm({ toggleForm, activeButton }) {
             Sign Up
           </button>
         </div>
-        <div className="details-input-container">
+        <div className="details-input-container_signUp">
           <div className="login_signUp_title">
             <h5>Sign Up For Free</h5>
           </div>
           <div className="login_signUp_form_form">
             <form className="login_signUp_button_form_form" onSubmit={handleSubmit}>
+              <div className="login_form_and_button">
               <div className="login_signUp_button_form_form_input">
                 <input
                   type="text"
@@ -233,6 +237,8 @@ function SignUpForm({ toggleForm, activeButton }) {
 
                 ></input>
               </div>
+              </div>
+              
               <div className="login_signUp_button_login_getStarted">
           <button className="login_signUp_button_login_button_getStarted" >
             GET STARTED

@@ -12,6 +12,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    gap:4rem;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -22,9 +25,8 @@
     width: 25%;
     height: 75vh;
     padding: 1rem;
-    gap: 2rem;
-    margin-top: 50px;
-    border-radius: 10px;
+    gap: 4rem;
+    border-radius: 5px;
 }
 
 .login_signUp_singUp {
@@ -34,9 +36,8 @@
     width: 25%;
     height: 75vh;
     padding: 1rem;
-    gap: 4.5rem;
-    margin-top: 50px;
-    border-radius: 10px;
+    gap: 4rem;
+    border-radius: 5px;
 }
 
 
@@ -59,8 +60,8 @@
 
 
 .login_signUp_button button {
-    padding: 15px 50px;
-    width: 40%;
+    padding: 15px ;
+    width: 50%;
     cursor: pointer;
     border: none;
 }
@@ -74,18 +75,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 10px;
+
 
 }
 
 .login_signUp_button_login button {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     padding: 20px 0;
     cursor: pointer;
     border: none;
-    margin-top: 5rem;
     font-size: 30px;
     color: white;
     background-color: #1e8c7e;
@@ -95,8 +96,9 @@
 
 }
 
+
 .login_signUp_button_login_button_getStarted {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     padding: 20px 0;
@@ -120,7 +122,6 @@
 .login_signUp_button_login {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
 }
 
 .login_signUp_title {
@@ -153,6 +154,7 @@
     width: 80%;
     display: flex;
     flex-direction: column;
+    gap:3rem;
 }
 
 
@@ -186,6 +188,19 @@
     border-bottom-right-radius: 5px;
 }
 
+.details-input-container{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+
+.details-input-container_signUp{
+    display: flex;
+    flex-direction: column;
+    gap:5rem;
+}
+
 
 
 
@@ -195,6 +210,24 @@
     .login_signUp{
         width: 40%;
     }
+}
+
+@media only screen and (max-width:480px){
+
+    .login_signUp{
+        width: 90%;
+    }
+
+    .container{
+        height: 100dvh;
+    }
+
+    .login_signUp_singUp{
+        width: 90%;
+    }
+
+
+
 }
 
 
