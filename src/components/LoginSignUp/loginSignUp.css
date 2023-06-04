@@ -214,16 +214,19 @@
 
 @media only screen and (max-width:480px){
 
-    .login_signUp{
-        width: 90%;
-    }
-
     .container{
         height: 100dvh;
     }
 
+    .login_signUp{
+        width: 90%;
+        height: 72dvh;
+    }
+
+
     .login_signUp_singUp{
         width: 90%;
+        height: 72dvh;
     }
 
 
