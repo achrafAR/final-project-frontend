@@ -195,6 +195,12 @@
     width: 390px;
   }
 
+  .video_description{
+    width: 90%;
+  }
+
+  
+
   .video_description_container{
     display: flex;
     align-items: center;
@@ -205,5 +211,14 @@
 @media only screen and (max-width: 390px) {
   .video_description_video iframe {
     width: 370px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 360px) {
+  .video_description_video iframe {
+    width: 340px;
   }
 }

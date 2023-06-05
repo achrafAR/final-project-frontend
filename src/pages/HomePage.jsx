@@ -14,6 +14,7 @@ function HomePage() {
     return (
         <div className='HomePage_Page'
         style={{
+            width:'100%',
             display:'flex',
             flexDirection: 'column',
             gap:'10dvh',
@@ -28,11 +29,11 @@ function HomePage() {
             <Welcome />
             <AssiRiver />
             <RaftingFounder />
-            <VideoDescription />
+            {/*<VideoDescription />
             <Welcome />
             <OpeningDate />
             <Gallery />
-            <Footer />
+            <Footer /> */}
         </div>
     )
 }

@@ -77,37 +77,37 @@
 
 
 
-    @media only screen and (max-width:420px) {
+    @media only screen and (max-width:767px) {
 
         
 
         .rafting_founder_container{
             display: flex;
             flex-direction: column;
-            gap:30px;
+            gap:50px;
             align-items: center;
             justify-content: center;
         }
 
         .rafting_founder{
+            gap:10px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
-            gap:20px;
+            justify-content: center;
         }
 
-        .rafting_founder_title_description p{
-            margin: 0;
-        }
-
-        .rafting_founder_title_description h5{
-            margin: 0;
-        }
 
         .rafting_founder_title_description{
-            gap:10px;
+            gap:20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
+
+    
 
 
 

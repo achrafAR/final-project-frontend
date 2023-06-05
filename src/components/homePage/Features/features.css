@@ -64,7 +64,7 @@
   
 
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:767px) {
 
   .feature {
   display: none;  }
@@ -72,12 +72,7 @@
   }
 
 
-@media only screen and (max-width:420px) {
 
-.feature {
-display: none;  }
-  
-}
 
 
 

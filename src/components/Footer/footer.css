@@ -429,3 +429,15 @@
 }
 
 
+@media only screen and (max-width:390px){
+
+    .footer_and_link{
+        height: 175vh;
+        
+        
+    }
+
+
+}
+
+
