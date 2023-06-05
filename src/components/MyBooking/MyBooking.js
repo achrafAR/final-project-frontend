@@ -32,6 +32,37 @@ function MyBooking() {
     }
   }, [userId]);
 
+
+
+  const removeOrderFromCart = (offerId) => {
+      axios
+      .delete(`https://raftinglb.onrender.com/myBooking/${offerId}`)
+      .then((response) => {
+        // Handle successful response
+        console.log("Item removed from cart:", response.data);
+        window.alert("Item removed from cart");
+      })
+      .catch((error) => {
+        // Handle error
+        console.error("Error removing item from cart:", error);
+      });
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const [newOrder, setNewOrder] = useState({
     name: "",
     phoneNumber: "",
@@ -120,7 +151,10 @@ function MyBooking() {
                       <p className="order-page__product-price">
                         Total Price:{offer.total_price}
                       </p>
-                      <button>Remove</button>
+                      <button
+                      onClick={() => removeOrderFromCart(offer.offerId)}
+
+                      >Remove</button>
                     </div>
                   ));
                 })}
