@@ -29,11 +29,11 @@ function HomePage() {
             <Welcome />
             <AssiRiver />
             <RaftingFounder />
-            {/*<VideoDescription />
+            <VideoDescription />
             <Welcome />
             <OpeningDate />
             <Gallery />
-            <Footer /> */}
+            <Footer />
         </div>
     )
 }

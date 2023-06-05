@@ -68,7 +68,7 @@
 
 
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:767px) {
 
     .openingDate{
     
@@ -87,28 +87,6 @@
     }
 
 
-@media only screen and (max-width:420px) {
-
-.openingDate{
-
-    display: flex;
-    flex-direction: column;
-    height: 125dvh;
-    gap:10px;
-
-}
-
-.opening_date_opening_date p{
-    margin: 0;
-    width: 150px;
-}
-
-.opening_date_images{
-    margin: 0;
-}
-
-
-}
 
 
 

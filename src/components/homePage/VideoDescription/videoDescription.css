@@ -95,9 +95,10 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   .video_description_container {
     height: 120dvh;
+    width: 100% !important;
   }
 
   .video_description {
@@ -109,14 +110,26 @@
   .video_description_information_title h2 {
     font-size: 30px;
     text-align: center;
+    width: 70%;
+    margin: 0;
   }
+
+  .video_description_information_title{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+
 
   .video_description_information_description p {
     text-align: center;
+    margin: 0;
   }
 
   .video_description_information {
     width: 100%;
+    gap:1rem;
   }
 
   .blogger {
@@ -131,94 +144,19 @@
     gap: 5px;
   }
 
-  .video_description_video iframe {
-    width: 400px;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .video_description_container {
-    width: 100%;
-    height: 130dvh;
+  .video_description_video {
     display: flex;
-    /* align-items: center; */
+    justify-content: center;
+    width:100%;
   }
 
-  .video_description {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    height: 120dvh;
-  }
-
-  .video_description_information_title h2 {
-    font-size: 30px;
-    text-align: center;
-    margin: 0;
-  }
-
-  .video_description_information{
-    gap: 20px;
-  }
-
-
-
-  .video_description_information_description p {
-    text-align: center;
-    margin: 0;
-  }
-
-  .video_description_information {
+  .video_description_video iframe{
     width: 100%;
   }
-
-  .blogger {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .blogger_details {
-    text-align: center;
-    gap: 5px;
-  }
-
-  .video_description_video iframe {
-    width: 340px;
-  }
-}
-
-@media only screen and (max-width: 414px) {
-
-  .video_description_video iframe {
-    width: 390px;
-  }
-
-  .video_description{
-    width: 90%;
-  }
-
-  
-
-  .video_description_container{
-    display: flex;
-    align-items: center;
-  }
-}
-
-
-@media only screen and (max-width: 390px) {
-  .video_description_video iframe {
-    width: 370px;
-  }
 }
 
 
 
 
-@media only screen and (max-width: 360px) {
-  .video_description_video iframe {
-    width: 340px;
-  }
-}
+
+
