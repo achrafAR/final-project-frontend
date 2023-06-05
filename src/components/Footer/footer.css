@@ -253,10 +253,7 @@
         gap:1rem;
     }
 
-    .contact_info{
-        display: flex;
-        flex-direction: column;
-    }
+    
 
     .footer_footer_column{
         gap:2rem;
@@ -301,7 +298,7 @@
     }
     
     .footer_and_link{
-        height: 170vh;
+        height: 165vh;
         
         
     }
@@ -362,6 +359,13 @@
     
     
     
+    }
+
+    @media only screen and (max-width:400px){
+
+        .footer_and_link{
+            height: 180dvh;
+        }
     }
 
 

@@ -84,6 +84,7 @@
         }
 
         .rafting_founder_container{
+            width: 100%;
             display: flex;
             flex-direction: column;
             gap:50px;
@@ -92,7 +93,6 @@
         }
 
         .rafting_founder{
-            gap:10px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -101,12 +101,11 @@
 
 
         .rafting_founder_title_description{
+            margin: 0;
             gap:20px;
-            width: 100%;
+            width: 90%;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            
         }
 
     

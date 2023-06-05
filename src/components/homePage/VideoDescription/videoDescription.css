@@ -97,7 +97,7 @@
 
 @media only screen and (max-width: 767px) {
   .video_description_container {
-    height: 125dvh;
+    height: 130dvh;
     width: 100% !important;
   }
 
@@ -110,7 +110,7 @@
   .video_description_information_title h2 {
     font-size: 30px;
     text-align: center;
-    width: 70%;
+    width: 90%;
     margin: 0;
   }
 
