@@ -79,7 +79,9 @@
 
     @media only screen and (max-width:767px) {
 
-        
+        .rafting_founder_title_description p{
+            margin: 0;
+        }
 
         .rafting_founder_container{
             display: flex;

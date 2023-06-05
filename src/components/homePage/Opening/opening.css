@@ -79,10 +79,16 @@
     
     }
 
-    .opening_date_img{
+    
+
+    .opening_date_img img{
         margin: 0;
+    }
+
+    .opening_date_img{
         display: flex;
-        gap:20px;
+        justify-content: center;
+        align-items: center;
     }
 
 
