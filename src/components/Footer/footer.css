@@ -247,7 +247,11 @@
 
 @media only screen and (max-width:767px){
 
-
+    .achivments{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
 
     .contact_info{
         display: flex;
@@ -255,7 +259,7 @@
     }
 
     .footer_footer_column{
-        gap:1rem;
+        gap:2rem;
     }
 
     
@@ -287,6 +291,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        gap:5rem;
     }
     
     .footer_footer_column{
@@ -296,7 +301,7 @@
     }
     
     .footer_and_link{
-        height: 180vh;
+        height: 170vh;
         
         
     }
@@ -305,6 +310,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap:1rem;
     }
     
     .footer_footer_column{
@@ -335,6 +341,22 @@
     .footer_footer_link ul {
         display: flex;
         align-items: center;
+    }
+
+    .footer_footer_link h5{
+        margin: 0;
+    }
+
+    .achivments p{
+        margin: 0;
+    }
+
+    .achivments h5{
+        margin: 0;
+    }
+
+    .footer_footer_column:last-child{
+        gap:0.5rem
     }
     
     
