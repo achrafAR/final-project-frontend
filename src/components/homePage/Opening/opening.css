@@ -79,8 +79,27 @@
     
     }
 
+    .opening_date_img{
+        margin: 0;
+        display: flex;
+        gap:20px;
+    }
+
+
+
+    .template_opening{
+        height: 125dvh;
+        display: flex;
+        justify-content: center;
+        
+    }
+
     .opening_date_images{
         margin-top: 15px;
+    }
+
+    .opening_date_opening_date p{
+        margin: 0;
     }
 
 

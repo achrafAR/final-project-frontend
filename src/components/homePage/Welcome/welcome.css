@@ -83,10 +83,12 @@
             width: 100%;
             display: flex;
             align-items: center;
+            gap:1rem;
         }
         
         .welcome_title_description p{
             text-align: center;
+            margin: 0;
         }
 
         .welcome_title_description h5{
