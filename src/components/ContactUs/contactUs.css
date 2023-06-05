@@ -100,65 +100,6 @@ input:focus{
 }
 
 
-
-
-@media only screen and (max-width:480px){
-
-    .contactUs_details_maindiv{
-        display: flex;
-        gap:3rem;
-    }
-
-    .contactUs_details_maindiv{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    .contactUs_container_map_form {
-        display: flex;
-        flex-direction: column;
-        margin-top: 100px;
-        width: 90%;
-        align-items: center;
-
-    }
-
-    .contactUs_container_map{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .contactUs_container_map_form iframe{
-        width: 410px;
-        height: 500px;
-
-    }
-
-    .contactUs_container_map_form form{
-        width: 380px;
-    }
-
-    .contact_container_form  {
-        width: 100%;
-    }
-
-    .mainComp_title{
-        width: 400px;
-    }
-
-
-
-
-}
-
-
 @media only screen and (max-width:1280px){
     .contactUs_details_maindiv{
         width: 90%;
@@ -170,7 +111,17 @@ input:focus{
 }
 
 
-@media only screen and (max-width:420px){
+
+
+@media only screen and (max-width:767px){
+
+    
+
+    .contactUs_details_maindiv{
+        display: flex;
+        gap:3rem;
+    }
+
 
     .contactUs_details_maindiv{
         display: flex;
@@ -182,20 +133,17 @@ input:focus{
 
     }
 
-    .mainComp_title_description p{
-        width: 100%;
-    }
-
     .contactUs_container_map_form {
         display: flex;
         flex-direction: column;
-        margin-top: 100px;
-        width: 90%;
+        width: 100%;
         align-items: center;
+        justify-content: center;
 
     }
 
     .contactUs_container_map{
+        width: 90%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -203,46 +151,33 @@ input:focus{
     }
 
     .contactUs_container_map_form iframe{
-        width: 350px;
+        width: 100%;
         height: 500px;
 
     }
 
     .contactUs_container_map_form form{
-        width: 330px;
-    }
-
-    .contact_container_form  {
         width: 100%;
     }
 
+    .contact_container_form  {
+        width: 90%;
+    }
+
+    .mainComp_title{
+        width: 400px;
+    }
+
+    .contactUs_details_maindiv{
+        width: 90%;
+    }
+
 
 
 
 }
 
-@media only screen and (max-width:390px){
-
-.contactUs_container_map_form iframe{
-    width: 370px;
-}
 
 
-}
-
-
-@media only screen and (max-width:414px){
-
-    .contactUs_container_map_form iframe{
-        width: 390px;
-    }
-
-
-    .contactUs_container_map_form form{
-        width: 380px;
-    }
-    
-    
-    }
 
 
