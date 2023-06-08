@@ -20,6 +20,17 @@ function Popular() {
     fetchData();
   }, []);
 
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   return (
     <div className='popular'>
       <div className='destination_title'>
@@ -32,19 +43,34 @@ function Popular() {
           const backgroundImageStyle = {
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${popular.image})`,
           };
+          const isHovered = index === hoveredIndex;
+
+
           return (
-              <div className='destination' key={index} style={backgroundImageStyle}>
+              <div className='destination' key={index} style={backgroundImageStyle}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+              
+              
+              >
 
               <div className='destination_info'>
-                <div className='destination_name'><h5>{popular.title}</h5></div>
-                <div className='destination_image_dark'>
+
+              <div className="destination_name">
+                  <h5>{popular.title}</h5>
+                </div>
                 <div className='destination_location'>
                   <img src={map} alt='Map' />
                   <span>{popular.location}</span>
                 </div>
+                <div
+                  className={`destination_description ${isHovered ? 'show' : ''}`}
+                >
+                  <p>{popular.description}</p>
                 </div>
                 
-              </div>
+                </div>
+                
               </div>
               
 
@@ -53,6 +79,8 @@ function Popular() {
 
         </div>
     </div>
+    
+    
   )
 }
 

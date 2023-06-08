@@ -17,6 +17,8 @@ export default function Gallery() {
 
   const [generalGalleries, serGeneralGalleries] = useState([])
   const [clickedImage, setClickedImage] = useState(null);
+  const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -56,7 +58,6 @@ export default function Gallery() {
     speed: 300,
     slidesToShow: getSlidesToShow(),
     slidesToScroll: 1,
-    autoplay: true,
     autoplaySpeed: 2000,
     lazyLoad: true,
 
@@ -66,16 +67,18 @@ export default function Gallery() {
   };
 
 
-  function getSlidesToShow() {
-    const isMobile = window.innerWidth <= 768;
-    return isMobile ? 1 : 3;
+
+   function getSlidesToShow() {
+    return window.innerWidth <= 768 ? 1 : 3;
   }
 
   useEffect(() => {
     const handleResize = () => {
-      settings.slidesToShow = getSlidesToShow();
+      setSlidesToShow(getSlidesToShow());
     };
+
     window.addEventListener('resize', handleResize);
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
