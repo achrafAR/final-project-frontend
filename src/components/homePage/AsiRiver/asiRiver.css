@@ -81,7 +81,15 @@
     height: 300px;
     display: flex;
     flex-wrap: nowrap;
+    transition: transform 0.5s ease;
 
+
+}
+
+.assi_river_images img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+    
 }
 
 

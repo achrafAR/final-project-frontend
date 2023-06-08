@@ -1,85 +1,164 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "./Gallery.css";
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
+import './Gallery.css'
 import MainComp from "../mainComponent/MainComp";
 import Footer from "../Footer/Footer";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
-import Image from "../../images/destination.png";
 
-function App() {
-  return (
-    <div className="gallery">
-      <MainComp title="Gallery" text="Battikh" backgroundName="gallery_hero" />
-      <div className="container_slider">
-        <h1 className="heading">Rafting Gallery</h1>
-        <div className="gallery_container">
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            loop={true}
-            slidesPerView={"3"}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 2.5,
-            }}
-            pagination={{ el: ".swiper-pagination", clickable: true }}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-              clickable: true,
-            }}
-            modules={[EffectCoverflow, Pagination, Navigation]}
-            className="swiper_container"
-          >
-            <SwiperSlide>
-              <img src={Image} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={Image} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={Image} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={Image} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={Image} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={Image} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={Image} alt="slide_image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={Image} alt="slide_image" />
-            </SwiperSlide>
 
-            <div className="slider-controler">
-              <div className="swiper-button-prev slider-arrow">
-                <ion-icon className="arrow-back-outline"></ion-icon>
-              </div>
-              <div className="swiper-button-next slider-arrow">
-                <ion-icon className="arrow-forward-outline"></ion-icon>
-              </div>
-              <div className="swiper-pagination"></div>
-            </div>
-          </Swiper>
-        </div>
+
+export default function Gallery() {
+
+  const [generalGalleries, serGeneralGalleries] = useState([])
+  const [clickedImage, setClickedImage] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://raftinglb.onrender.com/generalGallery");
+        serGeneralGalleries(response.data.data);
+        console.log(response.data.data)
+      } catch (error) {
+        console.log("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  function PrevArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={className} onClick={onClick}>
+        <FontAwesomeIcon icon={faChevronLeft} />
       </div>
+    );
+  }
+
+  function NextArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={className} onClick={onClick}>
+        <FontAwesomeIcon icon={faChevronRight} />
+      </div>
+    );
+  }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: getSlidesToShow(),
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    lazyLoad: true,
+
+
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+  };
+
+
+  function getSlidesToShow() {
+    const isMobile = window.innerWidth <= 768;
+    return isMobile ? 1 : 3;
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      settings.slidesToShow = getSlidesToShow();
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+
+  const openPopup = (image) => {
+    setClickedImage(image);
+  };
+
+  const closePopup = () => {
+    setClickedImage(null);
+  };
+
+
+  return (
+
+
+
+    <div className='gallery'>
+      <MainComp title="Gallery" text="Battikh" backgroundName="gallery_hero" />
+      
+      {generalGalleries && generalGalleries.map((gallery, index) => (
+
+      <div key={index} className='gallery_carousel'>
+          <div className='gallery_title'><h2>{gallery.title}</h2>
+          </div>
+
+
+
+      <Slider {...settings} className='gallery_slider'>
+        {gallery.image.map((image, imageIndex) => (
+
+          <div className='gallery_images' key={imageIndex}>
+            <img src={image} alt="destination" className='gallery_image'                  
+            onClick={() => openPopup(image)}
+/>
+          </div>
+        ))}
+          
+        </Slider>
+        {clickedImage && (
+            <div className="popup">
+              <div className="popup_content">
+                <img src={clickedImage} alt="Clicked Image" className="popup_image" />
+                <button className="popup_close" onClick={closePopup}>Close</button>
+              </div>
+            </div>
+          )}
+      </div>
+        
+
+      ))}
+      {clickedImage && (
+        <div className="popup">
+          <div className="popup_content">
+            <img src={clickedImage} alt="Clicked Image" className="popup_image" />
+            <button className="popup_close" onClick={closePopup}>Close</button>
+          </div>
+        </div>
+      )}
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

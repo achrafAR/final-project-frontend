@@ -33,20 +33,17 @@ function MyBooking() {
   }, [userId]);
 
 
-
-  const removeOrderFromCart = (offerId) => {
-      axios
-      .delete(`https://raftinglb.onrender.com/myBooking/${offerId}`)
-      .then((response) => {
-        // Handle successful response
-        console.log("Item removed from cart:", response.data);
-        window.alert("Item removed from cart");
-      })
-      .catch((error) => {
-        // Handle error
-        console.error("Error removing item from cart:", error);
-      });
+  const removeOrderFromCart = async (offerId, userId) => {
+    try {
+      await axios.delete(`https://raftinglb.onrender.com/myBooking/${userId}/${offerId}`);
+      const response = await axios.get(`https://raftinglb.onrender.com/myBooking/${userId}`);
+      setMyBooking(response.data);
+      window.alert("Item removed from cart");
+    } catch (error) {
+      console.error("Error removing item from cart:", error);
+    }
   };
+
 
 
 
@@ -152,7 +149,7 @@ function MyBooking() {
                         Total Price:{offer.total_price}
                       </p>
                       <button
-                      onClick={() => removeOrderFromCart(offer.offerId)}
+                      onClick={() => removeOrderFromCart(offer.offerId, myBooking.userId)}
 
                       >Remove</button>
                     </div>
