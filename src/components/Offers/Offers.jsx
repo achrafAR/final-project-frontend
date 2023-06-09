@@ -18,10 +18,8 @@ function Offers() {
 
     const navigateToBooking = () => {
         const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-        console.log(userInfo)
         if (userInfo && userInfo._id) {
             const userId = userInfo._id;
-            console.log(userId)
             navigate(`/booking/${userId}`);
         } else {
             navigate("/login");

@@ -34,11 +34,11 @@ function MyBooking() {
 
 
   const removeOrderFromCart = async (offerId, userId) => {
-    console.log(userId)
-    console.log(offerId)
+    
     try {
       await axios.delete(`https://raftinglb.onrender.com/myBooking/${userId}/${offerId}`);
-      // const response = await axios.get(`https://raftinglb.onrender.com/myBooking/${userId}`);
+      const response = await axios.get(`https://raftinglb.onrender.com/myBooking/${userId}`);
+      setMyBooking(response.data);
       window.alert("Item removed from cart");
     } catch (error) {
       console.error("Error removing item from cart:", error);
@@ -52,8 +52,16 @@ function MyBooking() {
 
 
 
-
-
+  const handleCancelOrder = async () => {
+    try {
+      await axios.delete(`https://raftinglb.onrender.com/myBooking/user/${userId}`);
+      const response = await axios.get(`https://raftinglb.onrender.com/myBooking/${userId}`);
+      setMyBooking(response.data);
+      window.alert("Order cancelled successfully");
+    } catch (error) {
+      console.log("Error cancelling order:", error);
+    }
+  }
 
 
 
@@ -93,7 +101,6 @@ function MyBooking() {
     const config = {
       headers: { "content-type": "application/json" },
     };
-    console.log(order);
     try {
       const response = await axios.post(
         "https://raftinglb.onrender.com/orders",
@@ -136,8 +143,8 @@ function MyBooking() {
               {Array.isArray(myBooking) &&
                 myBooking.map((myBooking, index) => {
                   return myBooking.offers.map((offer, offerIndex) => (
-                    <div className="items" key={index}>
-                      <p className="order-page__product-name">
+                    <div className="items" key={`${index}-${offerIndex}`}>
+                    <p className="order-page__product-name">
                         {offer.offerName}
                       </p>
                       <p className="order-page__product-price">
@@ -223,7 +230,7 @@ function MyBooking() {
               <button className="confirm-button" onClick={handleConfirmOrder}>
                 Confirm Order
               </button>
-              <button className="cancel-button">Cancel Order</button>
+              <button className="cancel-button" onClick={handleCancelOrder}>Cancel Order</button>
             </div>
           </div>
         </div>

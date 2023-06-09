@@ -87,7 +87,7 @@
 }
 
 .assi_river_images img:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
     z-index: 1;
     
 }
@@ -114,6 +114,12 @@
 
 
 @media only screen and (max-width:767px) {
+
+    .assi_river_images img:hover {
+        transform: scale(1.1);
+        z-index: 1;
+        
+    }
 
     .template_background {
         height: 100vh;
