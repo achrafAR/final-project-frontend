@@ -126,7 +126,13 @@
 
 @media only screen and (max-width:767px) {
 
+  .gallery_carousel{
+    height: 100dvh;
+  }
 
+  .gallery_title{
+    width: 90%;
+  }
   
   .popup_content {
     position: relative;

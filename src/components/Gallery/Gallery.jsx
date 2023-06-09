@@ -17,7 +17,7 @@ export default function Gallery() {
 
   const [generalGalleries, serGeneralGalleries] = useState([])
   const [clickedImage, setClickedImage] = useState(null);
-  const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+  // const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
 
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function Gallery() {
     dots: true,
     infinite: true,
     speed: 300,
-    slidesToShow: getSlidesToShow(),
+    // slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 2000,
 
@@ -74,33 +74,30 @@ export default function Gallery() {
   };
 
   const getGallerySettings = (galleryIndex) => {
-    if (galleryIndex === 1 || galleryIndex === 3) {
-      return {
-        ...settings,
-        autoplay: true,
-        slidesToShow:4
-      };
+    if (window.innerWidth > 768) {
+      if (galleryIndex === 0 || galleryIndex === 2) {
+        return {
+          ...settings,
+          autoplay: true,
+          slidesToShow: 3,
+        };
+      } else if (galleryIndex === 1 || galleryIndex === 3) {
+        return {
+          ...settings,
+          slidesToShow: 4,
+        };
+      }
     }
-    return settings;
+    return {
+      ...settings,
+      autoplay: true,
+      slidesToShow: 1,
+    };
   };
 
 
 
-  function getSlidesToShow() {
-    return window.innerWidth <= 768 ? 1 : 3;
-  }
 
-  useEffect(() => {
-    const handleResize = () => {
-      setSlidesToShow(getSlidesToShow());
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
 
 
