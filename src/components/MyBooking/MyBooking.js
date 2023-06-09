@@ -34,10 +34,11 @@ function MyBooking() {
 
 
   const removeOrderFromCart = async (offerId, userId) => {
+    console.log(userId)
+    console.log(offerId)
     try {
       await axios.delete(`https://raftinglb.onrender.com/myBooking/${userId}/${offerId}`);
-      const response = await axios.get(`https://raftinglb.onrender.com/myBooking/${userId}`);
-      setMyBooking(response.data);
+      // const response = await axios.get(`https://raftinglb.onrender.com/myBooking/${userId}`);
       window.alert("Item removed from cart");
     } catch (error) {
       console.error("Error removing item from cart:", error);

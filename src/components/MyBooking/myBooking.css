@@ -231,6 +231,7 @@
     .myBooking_title{
         width: 100%;
         text-align: center;
+        
     }
 
     .myBooking_title h5{
@@ -249,8 +250,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 90% !important;
+        width: 85% !important;
     }
+
+    
 
     .right-side{
         padding: 10px;
@@ -260,6 +263,20 @@
         align-items: center;
         justify-content: center;
     }
+
+    .btn_dev{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn_dev button{
+        width: 70%;
+    }
+
+
 
     
 
@@ -297,6 +314,7 @@
 
     .right-side{
         width: 32%;
+
     }
 
 
