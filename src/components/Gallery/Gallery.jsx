@@ -34,6 +34,14 @@ export default function Gallery() {
     fetchData();
   }, []);
 
+
+  const galleryDescriptions = [
+    "popular worldwide and has become a popular adventure sport and tourist attraction in many regions with suitable rivers and water bodies.",
+    "The largest river in Lebanon.Its starts from Hermel region and is characterized by its extreme coldness and abundance ",
+    "Amazingly, this mountainous road is on of the most maintained roads in Lebanon with Juniperus trees all over the place.",
+    "One of the Oldest Cities in Lebanon. The River, The Mountains, The Ruins, The Juniper Trees",
+  ];
+
   function PrevArrow(props) {
     const { className, onClick } = props;
     return (
@@ -59,16 +67,26 @@ export default function Gallery() {
     slidesToShow: getSlidesToShow(),
     slidesToScroll: 1,
     autoplaySpeed: 2000,
-    lazyLoad: true,
 
 
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
 
+  const getGallerySettings = (galleryIndex) => {
+    if (galleryIndex === 1 || galleryIndex === 3) {
+      return {
+        ...settings,
+        autoplay: true,
+        slidesToShow:4
+      };
+    }
+    return settings;
+  };
 
 
-   function getSlidesToShow() {
+
+  function getSlidesToShow() {
     return window.innerWidth <= 768 ? 1 : 3;
   }
 
@@ -104,13 +122,17 @@ export default function Gallery() {
       
       {generalGalleries && generalGalleries.map((gallery, index) => (
 
-      <div key={index} className='gallery_carousel'>
-          <div className='gallery_title'><h2>{gallery.title}</h2>
+
+        <div key={index} className='gallery_carousel'>
+          <div className='gallery_title'>
+            <h2>{gallery.title}
+            <p>{galleryDescriptions[index]}</p>
+          </h2>
           </div>
 
 
 
-      <Slider {...settings} className='gallery_slider'>
+      <Slider {...getGallerySettings(index)} className='gallery_slider'>
         {gallery.image.map((image, imageIndex) => (
 
           <div className='gallery_images' key={imageIndex}>
