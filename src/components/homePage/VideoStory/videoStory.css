@@ -25,6 +25,12 @@
     align-items: center;
     gap: 5px;
   }
+
+  .img_container{
+    border-radius: 50%;
+    overflow: hidden;
+
+  }
   
   .img_container img {
     width: 75px;
