@@ -27,17 +27,17 @@
   }
 
   .img_container{
+    
     border-radius: 50%;
-    overflow: hidden;
-
+    border: 2px solid white;
+    outline: 3px solid red;
+    display: flex;
   }
   
   .img_container img {
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    border: 2px solid white;
-    outline: 3px solid red;
   }
   
   .modal {
