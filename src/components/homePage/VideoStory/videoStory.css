@@ -29,12 +29,13 @@
   .img_container{
     
     border-radius: 50%;
-    border: 2px solid white;
-    outline: 3px solid red;
+    
     display: flex;
   }
   
   .img_container img {
+    border: 2px solid white;
+    outline: 3px solid red;
     width: 75px;
     height: 75px;
     border-radius: 50%;
