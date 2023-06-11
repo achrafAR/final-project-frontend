@@ -9,6 +9,7 @@ import VideoDescription from "../components/homePage/VideoDescription/videoDescr
 import OpeningDate from "../components/homePage/Opening/opening.jsx";
 import Gallery from '../components/homePage/GalleryHomePage/GalleryHomePage.jsx'
 import Footer from '../components/Footer/Footer.jsx'
+import VideoStory from '../components/homePage/VideoStory/VideoStory.jsx';
 
 function HomePage() {
     return (
@@ -24,6 +25,7 @@ function HomePage() {
         
         >
             <HomeUi />
+            <VideoStory/>
             <Popular />
             {/* <ActivityDescription /> */}
             <Welcome />

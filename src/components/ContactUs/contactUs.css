@@ -115,6 +115,10 @@ input:focus{
 
 @media only screen and (max-width:767px){
 
+    .mission_and_vision{
+        height: 135dvh;
+    }
+
     
 
     .contactUs_details_maindiv{
