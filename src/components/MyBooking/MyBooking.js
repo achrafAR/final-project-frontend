@@ -4,8 +4,15 @@ import "./myBooking.css";
 import Footer from "../Footer/Footer.jsx";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import emailjs from "emailjs-com";
+
 
 function MyBooking() {
+    
+
+
+
+
   const [myBooking, setMyBooking] = useState([]);
   const navigate = useNavigate();
 
@@ -69,6 +76,7 @@ function MyBooking() {
 
 
 
+
   const [newOrder, setNewOrder] = useState({
     name: "",
     phoneNumber: "",
@@ -98,6 +106,8 @@ function MyBooking() {
       ),
     };
 
+
+
     const config = {
       headers: { "content-type": "application/json" },
     };
@@ -107,7 +117,32 @@ function MyBooking() {
         order,
         config
       );
+      
       console.log("Order created:", response.data);
+      const templateParams = {
+        name:newOrder.name,
+        phoneNumber: newOrder.phoneNumber,
+        date: newOrder.date,
+      };
+
+      emailjs
+    .send(
+      "service_0nnk4b8",
+      "template_vlwegj2",
+      templateParams,
+      "SvfqYlAZDBTRKlpnH"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+        // Reset the form if needed
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+
+      
 
       await axios.delete(
         `https://raftinglb.onrender.com/myBooking/user/${userId}`
@@ -227,8 +262,10 @@ function MyBooking() {
             </div>
             <hr className="line" />
             <div className="btn_dev">
-              <button className="confirm-button" onClick={handleConfirmOrder}>
-                Confirm Order
+            <button
+  className="confirm-button"
+  onClick={handleConfirmOrder}>               
+  Confirm Order
               </button>
               <button className="cancel-button" onClick={handleCancelOrder}>Cancel Order</button>
             </div>

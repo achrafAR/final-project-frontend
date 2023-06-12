@@ -12,9 +12,11 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "crypto-browserify": "^3.12.0",
     "emailjs": "^4.0.1",
     "emailjs-com": "^3.2.0",
     "react": "^18.2.0",
+    "react-chat-widget": "^3.1.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-id-swiper": "^4.0.0",
@@ -26,6 +28,9 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^9.3.2",
+    "twilio": "^4.11.2",
+    "url": "^0.11.1",
+    "url-polyfill": "^1.1.12",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

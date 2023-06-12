@@ -120,7 +120,8 @@
 
 .payment {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .order-page__product-name {
@@ -218,6 +219,11 @@
     background: rgb(210, 233, 238);
     font-size: 1.1rem;
     color: black;
+}
+
+.line{
+    margin: 0;
+    margin-top: 1rem;
 }
 
 
